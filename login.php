@@ -297,57 +297,26 @@
 </div>
 
 <script>
-  var loginBtn = $('login-btn');
+  document.addEventListener('DOMContentLoaded', function () {
+  var passwordInput = document.getElementById('password');
+  var toggleBtn = document.getElementById('toggle-pw');
+  if (!passwordInput || !toggleBtn) return;
 
-  function show(name) {
-    Object.keys(views).forEach(function (k) { views[k].hidden = (k !== name); });
-  }
-  function setError(msg) {
-    if (!msg) { errorBox.hidden = true; errorBox.textContent = ''; return; }
-    errorBox.hidden = false;
-    errorBox.innerHTML = '';
-    var s = document.createElement('strong');
-    s.textContent = 'Login failed.';
-    errorBox.appendChild(s);
-    errorBox.appendChild(document.createTextNode(' ' + msg));
-  }
+  toggleBtn.addEventListener('click', function () {
+    var isHidden = passwordInput.type === 'password';
+    var start = passwordInput.selectionStart;
+    var end = passwordInput.selectionEnd;
 
-  // Remember me: keep only the username, wrapped in try/catch
-  try {
-    var saved = localStorage.getItem('bigbrew:username');
-    if (saved) { username.value = saved; $('remember').checked = true; }
-  } catch (e) {}
+    passwordInput.type = isHidden ? 'text' : 'password';
+    toggleBtn.textContent = isHidden ? '🙈' : '👁';
+    toggleBtn.setAttribute('aria-pressed', String(isHidden));
+    toggleBtn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
 
-  $('toggle-pw').addEventListener('click', function () {
-    var showing = password.type === 'text';
-    password.type = showing ? 'password' : 'text';
-    this.textContent = showing ? '👁' : '🙈';
-    this.setAttribute('aria-pressed', String(!showing));
-    this.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+    // keep focus and caret position in the password field
+    passwordInput.focus();
+    passwordInput.setSelectionRange(start, end);
   });
-
-  
-
-
-  $('go-forgot').addEventListener('click', function () {
-    $('forgot-username').value = username.value;
-    $('forgot-form').hidden = false;
-    $('forgot-sent').hidden = true;
-    show('forgot');
-  });
-  $('back-login').addEventListener('click', function () { show('login'); });
-  $('forgot-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    $('forgot-form').hidden = true;
-    $('forgot-sent').hidden = false;
-  });
-
-  $('signout').addEventListener('click', function () {
-    password.value = '';
-    setError('');
-    show('login');
-  });
-();
+});
 </script>
 </body>
 </html>
