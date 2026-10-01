@@ -260,11 +260,6 @@
         <p class="note">Your role and access are determined by your account. Contact the owner to manage access.</p>
 
         <div class="demo">
-          <p>Demo accounts</p>
-          <div class="chips">
-            <button type="button" class="chip" data-user="owner">Owner login</button>
-            <button type="button" class="chip" data-user="cashier">Cashier login</button>
-          </div>
         </div>
       </section>
 
@@ -302,17 +297,6 @@
 </div>
 
 <script>
-(function () {
-  var USERS = [
-    { username: 'owner',   name: 'Branch Owner',   role: 'Owner' },
-    { username: 'cashier', name: 'Branch Cashier', role: 'Cashier' }
-  ];
-  var DEMO_PASSWORD = 'password';
-
-  var $ = function (id) { return document.getElementById(id); };
-  var views = { login: $('view-login'), forgot: $('view-forgot'), welcome: $('view-welcome') };
-  var username = $('username'), password = $('password');
-  var errorBox = $('login-error');
   var loginBtn = $('login-btn');
 
   function show(name) {
@@ -342,39 +326,8 @@
     this.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
   });
 
-  document.querySelectorAll('.chip').forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      username.value = chip.getAttribute('data-user');
-      password.value = DEMO_PASSWORD;
-      setError('');
-    });
-  });
+  
 
-  $('login-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!username.value.trim()) { setError('Username or email is required.'); return; }
-    if (!password.value.trim()) { setError('Password is required.'); return; }
-    loginBtn.disabled = true;
-    loginBtn.textContent = 'Signing in…';
-    setError('');
-    setTimeout(function () {
-      var name = username.value.toLowerCase().trim();
-      var user = USERS.filter(function (u) { return u.username === name; })[0];
-      loginBtn.disabled = false;
-      loginBtn.textContent = 'LOGIN';
-      if (!user || password.value !== DEMO_PASSWORD) {
-        setError('Invalid username or password. Please try again.');
-        return;
-      }
-      try {
-        if ($('remember').checked) localStorage.setItem('bigbrew:username', user.username);
-        else localStorage.removeItem('bigbrew:username');
-      } catch (err) {}
-      $('welcome-name').textContent = 'Welcome, ' + user.name;
-      $('welcome-role').textContent = 'Signed in as ' + user.role + ' · Putatan Branch';
-      show('welcome');
-    }, 800);
-  });
 
   $('go-forgot').addEventListener('click', function () {
     $('forgot-username').value = username.value;
@@ -394,7 +347,7 @@
     setError('');
     show('login');
   });
-})();
+();
 </script>
 </body>
 </html>
