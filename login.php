@@ -295,7 +295,6 @@
     <p class="footer">BigBrew Smart Operations · Putatan Branch · © 2026</p>
   </div>
 </div>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
   var passwordInput = document.getElementById('password');
