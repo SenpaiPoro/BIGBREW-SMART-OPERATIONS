@@ -12,7 +12,7 @@
 <body>
 <div class="app">
 
-  <!-- ===================== SIDEBAR ===================== -->
+  <!-- ===================== S  IDEBAR ===================== -->
   <aside class="sidebar" id="sidebar">
     <div class="sb-head">
       <div class="sb-brand">

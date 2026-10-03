@@ -1,3 +1,5 @@
+<?php include 'config/code.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -235,7 +237,7 @@
 
         <div id="login-error" class="alert error" role="alert" hidden></div>
 
-        <form id="login-form" class="spaced" novalidate>
+        <form id="login-form" class="spaced" novalidate action="config/code.php" method="post">
           <div class="field">
             <label for="username">Username or Email <span class="req">*</span></label>
             <input class="input" id="username" type="text" autocomplete="username" placeholder="Enter your username">
