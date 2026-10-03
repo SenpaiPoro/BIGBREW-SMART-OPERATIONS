@@ -28,8 +28,6 @@ if (isset($_POST['register'])) {
 }
 
 
-
-
 if(isset($_POST['login'])){
 $username = validate($_POST['username']);
 $password = validate($_POST['password']);
