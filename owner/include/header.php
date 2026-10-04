@@ -65,7 +65,7 @@ if ($userInitials === '') {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($pageTitle) ?> · BigBrew Smart Operations</title>
-<link rel="stylesheet" href="owner.css">
+<link rel="stylesheet" href="layout.css">
 </head>
 <body>
 
