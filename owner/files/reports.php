@@ -1,7 +1,7 @@
 <?php
 $pageTitle  = 'Reports';
 $activePage = 'reports';
-require_once __DIR__ . '/include/header.php';
+require_once __DIR__ . '/../include/header.php';
 ?>
       <div class="page-intro">
         <div>
