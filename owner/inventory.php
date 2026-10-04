@@ -69,7 +69,7 @@
 
       <div class="nav-group">
         <div class="nav-label">INSIGHTS</div>
-        <a class="nav-link" href="reports.html"><span><svg class="i" width="16" height="16"><use href="#i-file"/></svg></span><span>Reports</span></a>
+        <a class="nav-link" href="reports.php"><span><svg class="i" width="16" height="16"><use href="#i-file"/></svg></span><span>Reports</span></a>
       </div>
     </nav>
 
