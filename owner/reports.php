@@ -200,4 +200,4 @@ require_once __DIR__ . '/include/header.php';
   select(document.querySelector('.report-card.selected'));
 })();
 </script>
-<?php require_once __DIR__ . '/../include/footer.php'; ?>
+<?php require_once __DIR__ . '/include/footer.php'; ?>

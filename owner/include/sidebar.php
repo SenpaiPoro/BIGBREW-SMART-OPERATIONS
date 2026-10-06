@@ -13,8 +13,7 @@
 $nav = [
     'OPERATIONS' => [
         ['key' => 'dashboard',   'label' => 'Dashboard',   'href' => 'dashboard.php',   'icon' => 'grid'],
-        ['key' => 'new-sale',    'label' => 'New Sale',    'href' => 'new-sale.php',    'icon' => 'plus-circle'],
-        ['key' => 'order-queue', 'label' => 'Order Queue', 'href' => 'order-queue.php', 'icon' => 'list'],
+        ['key' => 'user', 'label' => 'User', 'href' => 'user.php', 'icon' => 'list'],
     ],
     'INVENTORY' => [
         ['key' => 'inventory',   'label' => 'Inventory',            'href' => 'inventory.php#inventory',   'icon' => 'box',   'view' => 'inventory'],
@@ -33,7 +32,7 @@ $nav = [
   <div class="nav-overlay" id="nav-overlay" hidden></div>
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <span class="brand-mark"><img src="<?= BASE_URL ?>/assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
+      <span class="brand-mark"><img src="<?= BASE_URL ?>/../assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
       <div>
         <strong>BigBrew<span class="brand-dot">.</span></strong>
         <small>SMART OPERATIONS</small>

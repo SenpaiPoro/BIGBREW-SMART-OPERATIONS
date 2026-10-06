@@ -1,7 +1,7 @@
 <?php
 $pageTitle  = 'Inventory';
 $activePage = 'inventory';
-require_once __DIR__ . '/../include/header.php';
+require_once __DIR__ . '/include/header.php';
 ?>
       <!-- =====================================================
            VIEW: INVENTORY + INGREDIENTS (same layout, title changes)
@@ -832,4 +832,4 @@ require_once __DIR__ . '/../include/header.php';
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModals(); });
 })();
 </script>
-<?php require_once __DIR__ . '/../include/footer.php'; ?>
+<?php require_once __DIR__ . '/include/footer.php'; ?>
