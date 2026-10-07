@@ -1,16 +1,22 @@
-BIGBREW CUSTOMER HTML VERSION
+BIGBREW CUSTOMER PHP VERSION
 
-Standalone interface converted from the uploaded React customer screens.
-Pages:
-- CustomerQR.html
-- CustomerMenu.html
-- CustomerCheckout.html
-- CustomerPayment.html
-- CustomerReceipt.html
-- CustomerOrderStatus.html
+Files:
+- functions.php: product data, beverage filter, cart functions, and total calculation.
+- CustomerMenu.php: dynamic beverage menu with category filtering and Add to Order.
+- CustomerCheckout.php: session cart and automatic total amount calculation.
+- CustomerPayment.php: payment selection.
+- CustomerReceipt.php: dynamic receipt.
+- CustomerOrderStatus.php: order status screen.
+- CustomerQR.php: QR landing screen.
+- style.css: ONE shared CSS file for all pages.
 
-Each page uses its own external CSS file.
+Run with XAMPP:
+1. Put this folder inside C:\xampp\htdocs\bigbrew_customer_php\
+2. Start Apache in XAMPP.
+3. Open http://localhost/bigbrew_customer_php/CustomerMenu.php
 
-This version is UI-focused/static. React state, API calls, QRCodeSVG generation,
-and MySQL/PHP integration are not included. Buttons/links are provided to
-demonstrate the screen-to-screen interface.
+Main PHP functions:
+- filterBeverages($category)
+- addToOrder($productId, $size, $quantity)
+- calculateOrderTotal($cart)
+- getCartItemCount()
