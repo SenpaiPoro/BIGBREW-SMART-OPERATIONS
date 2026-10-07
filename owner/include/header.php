@@ -59,6 +59,7 @@ if ($userInitials === '') {
     $userInitials = 'U';
 }
 ?>
+<?php include '../config/function.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,6 +67,7 @@ if ($userInitials === '') {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($pageTitle) ?> · BigBrew Smart Operations</title>
 <link rel="stylesheet" href="layout.css">
+<!-- <link rel="stylesheet" href="../assets/CSS/CSS.css"> -->
 </head>
 <body>
 
