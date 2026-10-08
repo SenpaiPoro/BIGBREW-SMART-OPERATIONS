@@ -335,7 +335,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $cart) {
             <div class="gcash-qr-wrapper">
 
                 <img
-                    src="gcash.jpg"
+                    src="../assets/img/gcash.jpg"
                     alt="BigBrew GCash QR Code"
                     class="gcash-qr"
                 >
