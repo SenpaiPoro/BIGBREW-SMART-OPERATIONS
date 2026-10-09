@@ -1,22 +1,27 @@
-BIGBREW CUSTOMER PHP VERSION
+BIGBREW CUSTOMER FLOW — PHP CONVERSION
 
 Files:
-- functions.php: product data, beverage filter, cart functions, and total calculation.
-- CustomerMenu.php: dynamic beverage menu with category filtering and Add to Order.
-- CustomerCheckout.php: session cart and automatic total amount calculation.
-- CustomerPayment.php: payment selection.
-- CustomerReceipt.php: dynamic receipt.
-- CustomerOrderStatus.php: order status screen.
-- CustomerQR.php: QR landing screen.
-- style.css: ONE shared CSS file for all pages.
+- CustomerCheckout.php
+- CustomerPayment.php
+- CustomerReceipt.php
 
-Run with XAMPP:
-1. Put this folder inside C:\xampp\htdocs\bigbrew_customer_php\
-2. Start Apache in XAMPP.
-3. Open http://localhost/bigbrew_customer_php/CustomerMenu.php
+This conversion follows the provided JSX component flow in PHP using the existing functions.php session/cart helpers and shared style.css.
 
-Main PHP functions:
-- filterBeverages($category)
-- addToOrder($productId, $size, $quantity)
-- calculateOrderTotal($cart)
-- getCartItemCount()
+INSTALL:
+1. Back up your existing PHP files first.
+2. Copy the three PHP files into your existing costumer folder, alongside functions.php and style.css.
+3. Ensure functions.php starts a session and provides getCart(), calculateOrderTotal(), and money().
+4. Place your QR image at the path used in CustomerPayment.php: ../assets/img/gcash.jpg. Adjust that relative path if your actual folder layout differs.
+5. Open CustomerCheckout.php through XAMPP/localhost.
+
+PAYMENT BEHAVIOR:
+- Cash, GCash, and Maya selection stays visible.
+- The GCash QR and reference form appear only after GCash is selected.
+- GCash reference submission saves the order/payment state as PENDING and shows the receipt.
+- A reference number is not proof of payment. Owner/cashier must verify the transaction before changing payment status to PAID.
+- Maya is a placeholder/pending flow only; no Maya gateway integration is included.
+
+IMPORTANT LIMITATIONS:
+- This is a PHP session-based flow; it does not call the React version's Orders/Create.php API. That API requires product_size_id and add-on IDs and should be integrated separately if the PHP site must write orders to the MySQL database.
+- Order number generation here is a session fallback, not a database-backed unique ID. For production, create order IDs in the database and add CSRF protection and server-side payment verification.
+- Keep your existing style.css. Additional GCash styles may be needed if not already present.
