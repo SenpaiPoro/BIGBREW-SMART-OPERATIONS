@@ -5,11 +5,9 @@ require_once __DIR__ . '/include/header.php'; ?>
 <div class="reports-page">
 
     <div class="reports-card">
-
         <!-- Header -->
         <div class="reports-card-header">
             <div class="reports-header-content">
-
                 <div>
                     <h2 class="reports-title">Account users</h2>
                     <p class="reports-subtitle">Manage account users and their permissions</p>
@@ -19,7 +17,6 @@ require_once __DIR__ . '/include/header.php'; ?>
                     <a href="index.php" class="reports-btn reports-btn-secondary">
                         Back
                     </a>
-
                     <a href="adduser.php" class="reports-btn reports-btn-primary">
                         User
                     </a>
@@ -30,11 +27,8 @@ require_once __DIR__ . '/include/header.php'; ?>
 
         <!-- Table -->
         <div class="reports-card-body">
-
             <div class="reports-table-wrapper">
-
                 <table class="reports-table">
-
                     <thead>
                         <tr>
                             <th class="name-column">
