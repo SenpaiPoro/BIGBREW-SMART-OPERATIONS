@@ -1028,3 +1028,22 @@ tbody tr:hover{background:#fbfcfe}
   .compact-metrics .metric-card strong:last-child{font-size:16px}
   .receive-footer{align-items:stretch}
 }
+
+/* ============ SIDEBAR HOVER VISIBILITY FIX ============ */
+.sidebar .nav-link:hover:not(.active),
+.sidebar .nav-link:focus-visible:not(.active) {
+  color: #3b2920 !important;
+  background: #f3e7d8 !important;
+}
+.sidebar .nav-link:hover:not(.active) span,
+.sidebar .nav-link:hover:not(.active) svg,
+.sidebar .nav-link:focus-visible:not(.active) span,
+.sidebar .nav-link:focus-visible:not(.active) svg {
+  color: #3b2920 !important;
+  opacity: 1;
+}
+.sidebar .nav-link.active,
+.sidebar .nav-link.active span,
+.sidebar .nav-link.active svg {
+  color: #fffaf4;
+}
