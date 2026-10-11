@@ -1,7 +1,7 @@
 <?php
 $pageTitle  = 'Inventory';
 $activePage = 'inventory';
-require_once __DIR__ . '/include/header.php';
+require_once __DIR__ . '/header.php';
 ?>
       <!-- =====================================================
            VIEW: INVENTORY + INGREDIENTS (same layout, title changes)
