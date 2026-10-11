@@ -24,7 +24,6 @@ require_once __DIR__ . '/include/header.php'; ?>
 
             </div>
         </div>
-
         <!-- Table -->
         <div class="reports-card-body">
             <div class="reports-table-wrapper">
