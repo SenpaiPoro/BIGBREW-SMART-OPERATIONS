@@ -157,9 +157,7 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
   max-width: 1400px;
   margin: 0 auto;
 }
-
 /* ---------- CARD ---------- */
-
 .reports-card {
   width: 100%;
   background: var(--milk);
