@@ -146,12 +146,10 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
   .top-right .top-date, .top-divider, .top-right .avatar, .breadcrumb { display: none; }
   .main-content { padding: 20px 15px 22px; }
 }
-
 /* =========================================================
    REPORTS PAGE
    BigBrew Custom UI
    ========================================================= */
-
 .reports-page {
   width: 100%;
   max-width: 1400px;
@@ -181,7 +179,6 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
   justify-content: space-between;
   gap: 20px;
 }
-
 .reports-title {
   margin: 0;
   color: var(--coffee-dark);
