@@ -102,11 +102,9 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
 .profile-text { flex: 1; min-width: 0; }
 .profile-text strong { display: block; color: #fff; font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .profile-text small { color: var(--nav-muted); font-size: 10px; }
-
 .icon-btn { display: grid; place-items: center; padding: 6px; border: 0; border-radius: 7px; background: transparent; color: var(--nav-muted); }
 .icon-btn:hover { background: var(--nav-hover); color: #fff; }
 .nav-overlay { display: none; }
-
 /* ---------- TOP BAR ---------- */
 .topbar {
   position: sticky; top: 0; z-index: 20;
@@ -164,15 +162,12 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
   box-shadow: var(--shadow);
   overflow: hidden;
 }
-
 /* ---------- HEADER ---------- */
-
 .reports-card-header {
   padding: 22px 26px;
   border-bottom: 1px solid var(--border-light);
   background: var(--milk);
 }
-
 .reports-header-content {
   display: flex;
   align-items: center;
@@ -186,7 +181,6 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
   font-weight: 800;
   letter-spacing: -0.02em;
 }
-
 .reports-subtitle {
   margin: 5px 0 0;
   color: var(--text-soft);
