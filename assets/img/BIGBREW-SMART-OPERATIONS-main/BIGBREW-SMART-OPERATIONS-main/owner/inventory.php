@@ -53,7 +53,7 @@
         <div class="nav-label">OPERATIONS</div>
         <a class="nav-link" href="dashboard.php"><span><svg class="i" width="16" height="16"><use href="#i-grid"/></svg></span><span>Dashboard</span></a>
         <a class="nav-link" href="new-sale.php"><span><svg class="i" width="16" height="16"><use href="#i-plus-circle"/></svg></span><span>New Sale</span></a>
-        <a class="nav-link" href="order-queue.php"><span><svg class="i" width="16" height="16"><use href="#i-list"/></svg></span><span>Order Queue</span></a>
+        <a class="nav-link" href="user-accounts.php"><span><svg class="i" width="16" height="16"><use href="#i-list"/></svg></span><span>User Accounts</span></a>
       </div>
 
       <div class="nav-group">
