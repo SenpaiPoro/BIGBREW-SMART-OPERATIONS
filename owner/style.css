@@ -93,7 +93,6 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
 .nav-link.active { background: var(--brown); color: #fffaf4; font-weight: 700; }
 .nav-link > span:nth-child(2) { flex: 1; }
 .active-pip { width: 6px; height: 6px; border-radius: 50%; background: #fffaf4; }
-
 .sidebar-bottom { padding: 12px; border-top: 1px solid var(--nav-line); }
 .profile { display: flex; align-items: center; gap: 10px; padding: 6px 4px; color: var(--nav-text); border-radius: 9px; }
 .profile:hover { background: var(--nav-hover); }

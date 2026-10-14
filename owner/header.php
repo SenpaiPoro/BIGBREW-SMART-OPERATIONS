@@ -11,11 +11,9 @@
  *                        dashboard | new-sale | order-queue | inventory | reports
  *   $crumb       string  optional breadcrumb override
  */
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
 /*
  * BASE_URL = web path to the project root (e.g. "/bigbrew"), used for CSS,
  * images and logout. It is detected automatically. To hard-code it instead,
@@ -29,7 +27,6 @@ if (!defined('BASE_URL')) {
         ? rtrim(substr($root, strlen($doc)), '/')
         : '');
 }
-
 /*
  * Optional access guard - enable once your login stores the session.
  * if (empty($_SESSION['username'])) {
