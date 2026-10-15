@@ -14,7 +14,7 @@ $nav = [
     'OPERATIONS' => [
         ['key' => 'dashboard',   'label' => 'Dashboard',   'href' => 'dashboard.php',   'icon' => 'grid'],
         ['key' => 'new-sale',    'label' => 'New Sale',    'href' => 'new-sale.php',    'icon' => 'plus-circle'],
-        ['key' => 'order-queue', 'label' => 'Order Queue', 'href' => 'order-queue.php', 'icon' => 'list'],
+        ['key' => 'user-accounts', 'label' => 'User Accounts', 'href' => 'user-accounts.php', 'icon' => 'list'],
     ],
     'INVENTORY' => [
         ['key' => 'inventory',   'label' => 'Inventory',            'href' => 'inventory.php#inventory',   'icon' => 'box',   'view' => 'inventory'],
