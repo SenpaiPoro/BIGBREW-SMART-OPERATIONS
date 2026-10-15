@@ -35,7 +35,7 @@ $nav = [
     <div class="brand">
       <span class="brand-mark"><img src="<?= BASE_URL ?>/assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
       <div>
-        <strong>BigBrew<span class="brand-dot">.</span></strong>
+        <strong style="color: black">BigBrew</strong>
         <small>SMART OPERATIONS</small>
       </div>
       <button class="icon-btn" id="menu-close" type="button" aria-label="Close menu"><svg class="i" width="18" height="18"><use href="#i-x"/></svg></button>
