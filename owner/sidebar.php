@@ -56,7 +56,6 @@ $nav = [
       </div>
       <?php endforeach; ?>
     </nav>
-
     <div class="sidebar-bottom">
       <a class="profile" href="<?= BASE_URL ?>/logout.php" title="Sign out">
         <span class="avatar"><?= e($userInitials) ?></span>
