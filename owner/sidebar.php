@@ -40,10 +40,8 @@ $nav = [
       </div>
       <button class="icon-btn" id="menu-close" type="button" aria-label="Close menu"><svg class="i" width="18" height="18"><use href="#i-x"/></svg></button>
     </div>
-
     <div class="branch-label"><span class="branch-dot"></span> BRANCH <svg class="i" width="13" height="13"><use href="#i-chevron"/></svg></div>
     <div class="branch-name">Putatan, Muntinlupa</div>
-
     <nav>
       <?php foreach ($nav as $group => $items): ?>
       <div class="nav-group">
