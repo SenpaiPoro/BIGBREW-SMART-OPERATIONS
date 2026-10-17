@@ -13,7 +13,8 @@
 $nav = [
     'OPERATIONS' => [
         ['key' => 'dashboard',   'label' => 'Dashboard',   'href' => 'dashboard.php',   'icon' => 'grid'],
-        ['key' => 'user', 'label' => 'User', 'href' => 'user.php', 'icon' => 'list'],
+        ['key' => 'new-sale',    'label' => 'New Sale',    'href' => 'new-sale.php',    'icon' => 'plus-circle'],
+        ['key' => 'user-accounts', 'label' => 'User Accounts', 'href' => 'user-accounts.php', 'icon' => 'list'],
     ],
     'INVENTORY' => [
         ['key' => 'inventory',   'label' => 'Inventory',            'href' => 'inventory.php#inventory',   'icon' => 'box',   'view' => 'inventory'],
@@ -32,17 +33,15 @@ $nav = [
   <div class="nav-overlay" id="nav-overlay" hidden></div>
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <span class="brand-mark"><img src="<?= BASE_URL ?>/../assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
+      <span class="brand-mark"><img src="<?= BASE_URL ?>/assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
       <div>
-        <strong>BigBrew<span class="brand-dot">.</span></strong>
+        <strong style="color: black">BigBrew</strong>
         <small>SMART OPERATIONS</small>
       </div>
       <button class="icon-btn" id="menu-close" type="button" aria-label="Close menu"><svg class="i" width="18" height="18"><use href="#i-x"/></svg></button>
     </div>
-
     <div class="branch-label"><span class="branch-dot"></span> BRANCH <svg class="i" width="13" height="13"><use href="#i-chevron"/></svg></div>
     <div class="branch-name">Putatan, Muntinlupa</div>
-
     <nav>
       <?php foreach ($nav as $group => $items): ?>
       <div class="nav-group">
@@ -57,7 +56,6 @@ $nav = [
       </div>
       <?php endforeach; ?>
     </nav>
-
     <div class="sidebar-bottom">
       <a class="profile" href="<?= BASE_URL ?>/logout.php" title="Sign out">
         <span class="avatar"><?= e($userInitials) ?></span>

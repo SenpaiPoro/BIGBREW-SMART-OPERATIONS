@@ -132,7 +132,6 @@ require_once __DIR__ . '/include/header.php';
         </div>
 
       </div>
-
       <!-- ===== Preview ===== -->
       <div class="panel table-panel" id="preview">
         <div class="table-toolbar">
