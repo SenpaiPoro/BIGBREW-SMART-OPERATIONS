@@ -256,7 +256,7 @@
             <button type="button" class="link" id="go-forgot">Forgot password?</button>
           </div>
 
-          <button type="submit" class="btn" id="login-btn">LOGIN</button>
+          <button type="submit" class="btn" id="login-btn" name="login">LOGIN</button>
         </form>
 
         <p class="note">Your role and access are determined by your account. Contact the owner to manage access.</p>

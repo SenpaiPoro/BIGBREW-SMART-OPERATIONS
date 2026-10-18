@@ -32,7 +32,7 @@ if(isset($_POST['login'])){
 $username = validate($_POST['username']);
 $password = validate($_POST['password']);
 
-    $stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
+    $stmt = $conn->prepare("SELECT * FROM account WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
