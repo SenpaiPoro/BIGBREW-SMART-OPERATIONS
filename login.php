@@ -1,4 +1,4 @@
-<?php include 'config/code.php'; ?>
+<?php include 'config/function.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
