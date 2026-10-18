@@ -240,13 +240,13 @@
         <form id="login-form" class="spaced" novalidate action="config/code.php" method="post">
           <div class="field">
             <label for="username">Username or Email <span class="req">*</span></label>
-            <input class="input" id="username" type="text" autocomplete="username" placeholder="Enter your username">
+            <input class="input" id="username" type="text" name="username" autocomplete="username" placeholder="Enter your username">
           </div>
 
           <div class="field">
             <label for="password">Password <span class="req">*</span></label>
             <div class="pw">
-              <input class="input" id="password" type="password" autocomplete="current-password" placeholder="Enter your password">
+              <input class="input" id="password" type="password" name="password" autocomplete="current-password" placeholder="Enter your password">
               <button type="button" class="toggle" id="toggle-pw" aria-label="Show password" aria-pressed="false">👁</button>
             </div>
           </div>
