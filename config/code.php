@@ -38,7 +38,7 @@ $password = validate($_POST['password']);
 
 if($result->num_rows > 0 ){
     $row = $result-> fetch_assoc();
-    if(password_verify($password, $row['password'])){
+    if($password === $row['password']){
         $_SESSION['username'] = $row['username'];
         $_SESSION['id'] = $row['id'];
 
