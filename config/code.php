@@ -42,10 +42,10 @@ if($result->num_rows > 0 ){
         $_SESSION['username'] = $row['username'];
         $_SESSION['id'] = $row['id'];
 
-        header('Location: ../Portfolio_Dashboard/index.php');
+        header('Location: owner/index.php');
         exit();
     } else {
-    echo "<script>alert('Incorrect password'); window.location.href='../Portfolio_Dashboard/login.php';</script>";
+    echo "<script>alert('Incorrect password'); window.location.href='../login.php';</script>";
         exit();
     }
 }else{
