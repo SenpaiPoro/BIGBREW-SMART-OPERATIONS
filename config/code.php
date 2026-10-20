@@ -42,7 +42,7 @@ if($result->num_rows > 0 ){
         $_SESSION['username'] = $row['username'];
         $_SESSION['id'] = $row['id'];
 
-        header('Location: owner/index.php');
+        header('Location: ../owner/inventory-view.php');
         exit();
     } else {
     echo "<script>alert('Incorrect password'); window.location.href='../login.php';</script>";
