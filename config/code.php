@@ -1,8 +1,6 @@
 <?php
 include 'function.php';
 
-
-
 if (isset($_POST['register'])) {
     $employeeID = validate($_POST['employee_id']);
     $position = validate($_POST['position']);
@@ -26,43 +24,32 @@ if (isset($_POST['register'])) {
     }
 }
 
-
-if(isset($_POST['login'])){
-$username = validate($_POST['username']);
-$password = validate($_POST['password']);
+if (isset($_POST['login'])) {
+    $username = validate($_POST['username']);
+    $password = validate($_POST['password']);
 
     $stmt = $conn->prepare("SELECT * FROM account WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
-if($result->num_rows > 0 ){
-    $row = $result-> fetch_assoc();
-    if($password === $row['password']){
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['id'] = $row['id'];
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if ($password === $row['password']) {
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['id'] = $row['id'];
 
-        header('Location: ../owner/inventory-view.php');
-        exit();
+            header('Location: ../owner/inventory-view.php');
+            exit();
+        } else {
+            echo "<script>alert('Incorrect password'); window.location.href='../login.php';</script>";
+            exit();
+        }
     } else {
-    echo "<script>alert('Incorrect password'); window.location.href='../login.php';</script>";
+        echo "<script>alert('Incorrect ussername or password'); window.location.href='../Portfolio_Dashboard/login.php';</script>";
         exit();
-    }
-}else{
-    echo "<script>alert('Incorrect ussername or password'); window.location.href='../Portfolio_Dashboard/login.php';</script>";
-    exit();
 
     }
-} 
-
-
-
-
-
-
-
-
-
-
+}
 
 ?>
