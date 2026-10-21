@@ -33,7 +33,7 @@ $nav = [
   <div class="nav-overlay" id="nav-overlay" hidden></div>
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <span class="brand-mark"><img src="<?= BASE_URL ?>/assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
+      <span class="brand-mark"><img src="/assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
       <div>
         <strong style="color: black">BigBrew</strong>
         <small>SMART OPERATIONS</small>
