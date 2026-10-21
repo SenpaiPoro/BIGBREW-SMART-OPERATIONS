@@ -1,4 +1,5 @@
 <?php
+include '../config/function.php';
 /**
  * include/header.php
  * -----------------------------------------------------------------
