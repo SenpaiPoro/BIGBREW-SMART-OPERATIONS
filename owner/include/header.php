@@ -28,13 +28,11 @@ if (!defined('BASE_URL')) {
         ? rtrim(substr($root, strlen($doc)), '/')
         : '');
 }
-/*
- * Optional access guard - enable once your login stores the session.
- * if (empty($_SESSION['username'])) {
- *     header('Location: ' . BASE_URL . '/login.php');
- *     exit;
- * }
- */
+
+  if (empty($_SESSION['username'])) {
+      header('Location: ' . BASE_URL . '/login.php');
+      exit;
+  }
 
 if (!function_exists('e')) {
     /** Escape output for HTML. */
