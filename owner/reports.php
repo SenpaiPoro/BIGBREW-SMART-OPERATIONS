@@ -110,7 +110,6 @@ require_once __DIR__ . '/include/header.php';
             <a class="btn primary" href="export.php?type=payment-reconciliation"><svg class="i" width="13" height="13"><use href="#i-download"/></svg> Export CSV</a>
           </div>
         </div>
-
         <div class="panel report-card" data-report="Expense Report" data-columns="Date|Category|Description|Amount|Method|User">
           <span class="report-icon"><svg class="i" width="18" height="18"><use href="#i-chart"/></svg></span>
           <strong>Expense Report</strong>
@@ -120,7 +119,6 @@ require_once __DIR__ . '/include/header.php';
             <a class="btn primary" href="export.php?type=expense"><svg class="i" width="13" height="13"><use href="#i-download"/></svg> Export CSV</a>
           </div>
         </div>
-
         <div class="panel report-card" data-report="Audit Trail Report" data-columns="Date|Action|Module|User|Reference|Details">
           <span class="report-icon"><svg class="i" width="18" height="18"><use href="#i-list"/></svg></span>
           <strong>Audit Trail Report</strong>
@@ -130,7 +128,6 @@ require_once __DIR__ . '/include/header.php';
             <a class="btn primary" href="export.php?type=audit-trail"><svg class="i" width="13" height="13"><use href="#i-download"/></svg> Export CSV</a>
           </div>
         </div>
-
       </div>
       <!-- ===== Preview ===== -->
       <div class="panel table-panel" id="preview">
@@ -156,9 +153,6 @@ require_once __DIR__ . '/include/header.php';
           <span>Records for the selected report and date range will appear here.</span>
         </div>
       </div>
-
-    
-
 <script>
 (function () {
   /* ---------- report preview (UI only: swaps the table headers) ---------- */
