@@ -28,12 +28,10 @@ if (!defined('BASE_URL')) {
         ? rtrim(substr($root, strlen($doc)), '/')
         : '');
 }
-
   if (empty($_SESSION['username'])) {
       header('Location: ' . BASE_URL . '/login.php');
       exit;
   }
-
 if (!function_exists('e')) {
     /** Escape output for HTML. */
     function e($value)
