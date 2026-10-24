@@ -36,6 +36,23 @@ if (isset($_POST['login'])) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if ($password === $row['password']) {
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                if ($row['role'] === 'owner') {
+                    session_start();
+                    $_SESSION['username'] = $row['username'];
+                    $_SESSION['id'] = $row['id'];
+
+                    header('Location: ../owner/inventory-view.php');
+                    exit();
+                } else {
+                    echo "<script>alert('Access denied. You are not an owner.'); window.location.href='../login.php';</script>";
+                    exit();
+                }
+            } else {
+                echo "<script>alert('Incorrect username or password'); window.location.href='../login.php';</script>";
+                exit();
+            }
             $_SESSION['username'] = $row['username'];
             $_SESSION['id'] = $row['id'];
 
