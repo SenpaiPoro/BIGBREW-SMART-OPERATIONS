@@ -38,7 +38,7 @@ if (isset($_POST['login'])) {
         if ($password === $row['password']) {
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                if ($row['role'] === 'owner') {
+                if ($row['possition'] === 'owner') {
                     session_start();
                     $_SESSION['username'] = $row['username'];
                     $_SESSION['id'] = $row['id'];
