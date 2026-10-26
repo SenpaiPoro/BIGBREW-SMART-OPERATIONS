@@ -45,8 +45,15 @@ if (isset($_POST['login'])) {
 
                     header('Location: ../owner/inventory-view.php');
                     exit();
+                } else if ($row['position'] === 'manager') {
+                    session_start();
+                    $_SESSION['username'] = $row['username'];
+                    $_SESSION['id'] = $row['id'];
+
+                    header('Location: ../manager/dashboard.php');
+                    exit();
                 } else {
-                    echo "<script>alert('Access denied. You are not an owner.'); window.location.href='../login.php';</script>";
+                    echo "<script>alert('Access denied. You are not an owner or manager.'); window.location.href='../login.php';</script>";
                     exit();
                 }
             } else {
