@@ -38,19 +38,19 @@ if (isset($_POST['login'])) {
         if ($password === $row['password']) {
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                if ($row['possition'] === 'owner') {
+                if ($row['possition'] == 'owner') {
                     session_start();
                     $_SESSION['username'] = $row['username'];
                     $_SESSION['id'] = $row['id'];
 
                     header('Location: ../owner/inventory-view.php');
                     exit();
-                } else if ($row['position'] === 'manager') {
+                } else if ($row['position'] === 'employee') {
                     session_start();
                     $_SESSION['username'] = $row['username'];
                     $_SESSION['id'] = $row['id'];
 
-                    header('Location: ../manager/dashboard.php');
+                    header('Location: ../employee/cashier-dashboard.php');
                     exit();
                 } else {
                     echo "<script>alert('Access denied. You are not an owner or manager.'); window.location.href='../login.php';</script>";
