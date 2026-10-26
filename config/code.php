@@ -25,55 +25,84 @@ if (isset($_POST['register'])) {
 }
 
 if (isset($_POST['login'])) {
+
     $username = validate($_POST['username']);
     $password = validate($_POST['password']);
 
-    $stmt = $conn->prepare("SELECT * FROM account WHERE username = ?");
+    $stmt = $conn->prepare(
+        "SELECT id, username, password, position
+         FROM account
+         WHERE username = ?"
+    );
+
+    if (!$stmt) {
+        die("Database query preparation failed.");
+    }
+
     $stmt->bind_param("s", $username);
     $stmt->execute();
+
     $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
+    if ($result->num_rows === 1) {
+
         $row = $result->fetch_assoc();
+
+        // Verify the password
         if ($password === $row['password']) {
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                if ($row['possition'] == 'owner') {
-                    session_start();
-                    $_SESSION['username'] = $row['username'];
-                    $_SESSION['id'] = $row['id'];
 
-                    header('Location: ../owner/inventory-view.php');
-                    exit();
-                } else if ($row['position'] === 'employee') {
-                    session_start();
-                    $_SESSION['username'] = $row['username'];
-                    $_SESSION['id'] = $row['id'];
-
-                    header('Location: ../employee/cashier-dashboard.php');
-                    exit();
-                } else {
-                    echo "<script>alert('Access denied. You are not an owner or manager.'); window.location.href='../login.php';</script>";
-                    exit();
-                }
-            } else {
-                echo "<script>alert('Incorrect username or password'); window.location.href='../login.php';</script>";
-                exit();
+            // Start the session only if it is not already active
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
             }
+
+            session_regenerate_id(true);
+
             $_SESSION['username'] = $row['username'];
             $_SESSION['id'] = $row['id'];
+            $_SESSION['position'] = $row['position'];
 
-            header('Location: ../owner/inventory-view.php');
-            exit();
+            // Redirect according to the user's role
+            if ($row['position'] === 'owner') {
+
+                header('Location: ../owner/inventory-view.php');
+                exit();
+
+            } elseif ($row['position'] === 'employee') {
+
+                header('Location: ../employee/cashier-dashboard.php');
+                exit();
+
+            } else {
+
+                session_unset();
+                session_destroy();
+
+                echo "<script>
+                    alert('Access denied. Unauthorized account role.');
+                    window.location.href = '../login.php';
+                </script>";
+                exit();
+            }
+
         } else {
-            echo "<script>alert('Incorrect password'); window.location.href='../login.php';</script>";
+
+            echo "<script>
+                alert('Incorrect username or password.');
+                window.location.href = '../login.php';
+            </script>";
             exit();
         }
+
     } else {
-        echo "<script>alert('Incorrect ussername or password'); window.location.href='../Portfolio_Dashboard/login.php';</script>";
+
+        echo "<script>
+            alert('Incorrect username or password.');
+            window.location.href = '../login.php';
+        </script>";
         exit();
-
     }
-}
 
+    $stmt->close();
+}
 ?>
