@@ -34,7 +34,6 @@ if (isset($_POST['login'])) {
          FROM account
          WHERE username = ?"
     );
-
     if (!$stmt) {
         die("Database query preparation failed.");
     }
