@@ -38,16 +38,12 @@ if (isset($_POST['login'])) {
     if (!$stmt) {
         die("Database query preparation failed.");
     }
-
     $stmt->bind_param("s", $username);
     $stmt->execute();
 
     $result = $stmt->get_result();
-
     if ($result->num_rows === 1) {
-
         $row = $result->fetch_assoc();
-
         // Verify the password
         if ($password === $row['password']) {
 
@@ -55,7 +51,6 @@ if (isset($_POST['login'])) {
             if (session_status() === PHP_SESSION_NONE) {
                 session_start();
             }
-
             session_regenerate_id(true);
 
             $_SESSION['username'] = $row['username'];
@@ -74,7 +69,6 @@ if (isset($_POST['login'])) {
                 exit();
 
             } else {
-
                 session_unset();
                 session_destroy();
 
@@ -84,25 +78,20 @@ if (isset($_POST['login'])) {
                 </script>";
                 exit();
             }
-
         } else {
-
             echo "<script>
                 alert('Incorrect username or password.');
                 window.location.href = '../login.php';
             </script>";
             exit();
         }
-
     } else {
-
         echo "<script>
             alert('Incorrect username or password.');
             window.location.href = '../login.php';
         </script>";
         exit();
     }
-
     $stmt->close();
 }
 ?>

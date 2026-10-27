@@ -13,7 +13,6 @@ function GetData($table)
     $sql = "SELECT * FROM $table"; 
         return mysqli_query($conn, $sql);  
 }
-
 function checkId($paramType){
 
     if(isset($_GET[$paramType]))
