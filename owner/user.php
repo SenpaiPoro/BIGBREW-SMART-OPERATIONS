@@ -39,7 +39,7 @@ require_once __DIR__ . '/include/header.php';?>
                             </th>
 
                             <th class="code-column">
-                                Code
+                                Position
                             </th>
 
                             <th class="action-column">
@@ -65,11 +65,7 @@ require_once __DIR__ . '/include/header.php';?>
                             </td>
 
                             <td>
-                                <?= htmlspecialchars($DataList['address'] ?? ''); ?>
-                            </td>
-
-                            <td>
-                                <?= htmlspecialchars($DataList['code'] ?? ''); ?>
+                                <?= htmlspecialchars($DataList['position'] ?? ''); ?>
                             </td>
 
                             <td>
