@@ -47,7 +47,6 @@ require_once __DIR__ . '/include/header.php';?>
                             </th>
                         </tr>
                     </thead>
-
                     <tbody>
 
                         <?php
