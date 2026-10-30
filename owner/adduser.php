@@ -55,7 +55,7 @@ include 'include/header.php';
                     <!-- Type -->
                     <div class="mb-4">
                         <label for="resume-type" class="form-label">
-                            Entry Type <span class="required-mark">*</span>
+                            ROLE<span class="required-mark">*</span>
                         </label>
 
                         <select
