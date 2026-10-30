@@ -18,10 +18,8 @@ include 'include/header.php';
                 Back to Resume List
             </a>
         </div>
-
         <!-- Resume Form Card -->
         <div class="card resume-card">
-
             <div class="resume-card-header">
                 <div class="resume-icon" aria-hidden="true">
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +41,6 @@ include 'include/header.php';
                     <p>Complete the information below.</p>
                 </div>
             </div>
-
             <div class="card-body resume-card-body">
 
                 <form action="../config/code.php"
@@ -55,7 +52,6 @@ include 'include/header.php';
                         name="user_id"
                         value="<?= htmlspecialchars((string)($id ?? ''), ENT_QUOTES, 'UTF-8'); ?>"
                     >
-
                     <!-- Type -->
                     <div class="mb-4">
                         <label for="resume-type" class="form-label">
@@ -71,12 +67,10 @@ include 'include/header.php';
                             <option value="Experience">Work Experience</option>
                             <option value="Education">Education</option>
                         </select>
-
                         <div class="form-text">
                             Choose whether this entry is for work experience or education.
                         </div>
                     </div>
-
                     <!-- Company / School -->
                     <div class="mb-4">
                         <label for="resume-name" class="form-label">
@@ -112,13 +106,11 @@ include 'include/header.php';
                             required
                         >
                     </div>
-
                     <!-- Address -->
                     <div class="mb-4">
                         <label for="resume-address" class="form-label">
                             Address <span class="required-mark">*</span>
                         </label>
-
                         <input
                             type="text"
                             id="resume-address"
@@ -129,13 +121,11 @@ include 'include/header.php';
                             required
                         >
                     </div>
-
                     <!-- Year -->
                     <div class="mb-4">
                         <label for="resume-year" class="form-label">
                             Year <span class="required-mark">*</span>
                         </label>
-
                         <input
                             type="number"
                             id="resume-year"
@@ -147,13 +137,11 @@ include 'include/header.php';
                             required
                         >
                     </div>
-
                     <!-- Description -->
                     <div class="mb-4">
                         <label for="resume-description" class="form-label">
                             Description <span class="required-mark">*</span>
                         </label>
-
                         <textarea
                             id="resume-description"
                             name="description"
@@ -162,7 +150,6 @@ include 'include/header.php';
                             placeholder="Describe your responsibilities, achievements, or relevant details..."
                             required
                         ></textarea>
-
                         <div class="form-text">
                             Include relevant responsibilities, achievements, or educational details.
                         </div>
