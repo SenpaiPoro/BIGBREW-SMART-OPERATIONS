@@ -10,7 +10,7 @@ include 'include/header.php';
             <div>
                 <span class="resume-eyebrow">PROFILE MANAGEMENT</span>
                 <h2>Add Resume Information</h2>
-                <p>Add your education or work experience to your profile.</p>
+                <p>Role</p>
             </div>
 
             <a href="resumelist.php" class="btn resume-back-btn">
@@ -64,8 +64,8 @@ include 'include/header.php';
                             class="form-select"
                             required
                         >
-                            <option value="Experience">Work Experience</option>
-                            <option value="Education">Education</option>
+                            <option value="Manager">Manager</option>
+                            <option value="employee">Employee</option>
                         </select>
                         <div class="form-text">
                             Choose whether this entry is for work experience or education.
