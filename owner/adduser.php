@@ -8,14 +8,13 @@ include 'include/header.php';
         <!-- Page Heading -->
         <div class="resume-heading">
             <div>
-                <span class="resume-eyebrow">PROFILE MANAGEMENT</span>
-                <h2>Add Resume Information</h2>
-                <p>Role</p>
+                <span class="resume-eyebrow">Add User</span>
+                <h2>Add Bigbrew Smart Operation User</h2>
             </div>
 
-            <a href="resumelist.php" class="btn resume-back-btn">
+            <a href="userlist.php" class="btn resume-back-btn">
                 <span aria-hidden="true">&larr;</span>
-                Back to Resume List
+                Back to user List
             </a>
         </div>
         <!-- Resume Form Card -->
@@ -37,7 +36,7 @@ include 'include/header.php';
                 </div>
 
                 <div>
-                    <h4>Add New Entry</h4>
+                    <h4>Add New User</h4>
                     <p>Complete the information below.</p>
                 </div>
             </div>
@@ -71,16 +70,16 @@ include 'include/header.php';
                     <!-- Company / School -->
                     <div class="mb-4">
                         <label for="resume-name" class="form-label">
-                            Company or School Name
+                            First Name
                             <span class="required-mark">*</span>
                         </label>
 
                         <input
                             type="text"
                             id="resume-name"
-                            name="name"
+                            name="first_name"
                             class="form-control"
-                            placeholder="Enter the company or school name"
+                            placeholder="Enter first name"
                             maxlength="255"
                             required
                         >
@@ -89,14 +88,14 @@ include 'include/header.php';
                     <!-- Title -->
                     <div class="mb-4">
                         <label for="resume-title" class="form-label">
-                            Position or Degree
+                           Last Name
                             <span class="required-mark">*</span>
                         </label>
 
                         <input
                             type="text"
                             id="resume-title"
-                            name="title"
+                            name="last_name"
                             class="form-control"
                             placeholder="e.g., Cashier, Bachelor of Science in..."
                             maxlength="255"
@@ -106,58 +105,51 @@ include 'include/header.php';
                     <!-- Address -->
                     <div class="mb-4">
                         <label for="resume-address" class="form-label">
-                            Address <span class="required-mark">*</span>
+                            username <span class="required-mark">*</span>
                         </label>
                         <input
                             type="text"
                             id="resume-address"
-                            name="address"
+                            name="username"
                             class="form-control"
-                            placeholder="Enter the company or school's address"
+                            placeholder="Enter your username"
                             maxlength="255"
-                            required
-                        >
-                    </div>
-                    <!-- Year -->
-                    <div class="mb-4">
-                        <label for="resume-year" class="form-label">
-                            Year <span class="required-mark">*</span>
-                        </label>
-                        <input
-                            type="number"
-                            id="resume-year"
-                            name="year"
-                            class="form-control"
-                            placeholder="e.g., 2024"
-                            min="1900"
-                            max="<?= date('Y') + 10; ?>"
                             required
                         >
                     </div>
                     <!-- Description -->
                     <div class="mb-4">
                         <label for="resume-description" class="form-label">
-                            Description <span class="required-mark">*</span>
+                            Password <span class="required-mark">*</span>
                         </label>
-                        <textarea
+                        <input
                             id="resume-description"
-                            name="description"
+                            name="password"
+                            type="password"
                             class="form-control"
                             rows="4"
-                            placeholder="Describe your responsibilities, achievements, or relevant details..."
+                            placeholder="Enter your password"
                             required
-                        ></textarea>
-                        <div class="form-text">
-                            Include relevant responsibilities, achievements, or educational details.
-                        </div>
+                        ></input>
+                     
+                    </div>
+                    <div class="mb-4">
+                        <label for="resume-description" class="form-label">
+                            confirm Password <span class="required-mark">*</span>
+                        </label>
+                        <input
+                            id="resume-description"
+                            name="confirm_password"
+                            type="password"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Confirm your password"
+                            required
+                        ></input>
                     </div>
 
                     <!-- Actions -->
                     <div class="resume-form-footer">
-                        <span class="resume-required-note">
-                            <span class="required-mark">*</span>
-                            Required fields
-                        </span>
 
                         <div class="resume-form-actions">
                             <a href="resumelist.php"
@@ -167,10 +159,10 @@ include 'include/header.php';
 
                             <button
                                 type="submit"
-                                name="resume"
+                                name="user_add"
                                 class="btn resume-submit-btn"
                             >
-                                Save Resume Entry
+                                Add new user
                                 <span aria-hidden="true">&rarr;</span>
                             </button>
                         </div>
