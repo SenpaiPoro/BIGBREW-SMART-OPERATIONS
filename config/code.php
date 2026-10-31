@@ -93,4 +93,44 @@ if (isset($_POST['login'])) {
     }
     $stmt->close();
 }
+
+
+ if (isset($_POST['user_add'])) {
+    $employeeID = validate($_POST['employee_id']);
+    $position = validate($_POST['position']);
+    $firstName = validate($_POST['first_name']);
+    $lastName = validate($_POST['last_name']);
+    $username = validate($_POST['username']);
+    $password = validate($_POST['password']);
+
+    // Check if the username already exists
+    $checkQuery = "SELECT * FROM account WHERE username = '$username'";
+    $checkResult = mysqli_query($conn, $checkQuery);
+
+    if (mysqli_num_rows($checkResult) > 0) {
+        echo "<script>
+            alert('Username already exists. Please choose a different username.');
+            window.location.href = '../owner/adduser.php';
+        </script>";
+        exit();
+    }
+
+    // Insert the new user into the database
+    $insertQuery = "INSERT INTO account (employee_id, position, first_name, last_name, username, password) 
+                    VALUES ('$employeeID', '$position', '$firstName', '$lastName', '$username', '$password')";
+
+    if (mysqli_query($conn, $insertQuery)) {
+        echo "<script>
+            alert('User added successfully.');
+            window.location.href = '../owner/user.php';
+        </script>";
+        exit();
+    } else {
+        echo "<script>
+            alert('Error adding user: " . mysqli_error($conn) . "');
+            window.location.href = '../owner/adduser.php';
+        </script>";
+        exit();
+    }
+}
 ?>
