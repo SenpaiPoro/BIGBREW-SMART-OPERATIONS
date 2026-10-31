@@ -67,9 +67,6 @@ include 'include/header.php';
                             <option value="Manager">Manager</option>
                             <option value="employee">Employee</option>
                         </select>
-                        <div class="form-text">
-                            Choose whether this entry is for work experience or education.
-                        </div>
                     </div>
                     <!-- Company / School -->
                     <div class="mb-4">
