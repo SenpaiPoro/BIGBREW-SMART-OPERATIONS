@@ -148,112 +148,110 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
    Elegant Bootstrap-compatible styling
    ========================================== */
 
-.resume-page {
-    --resume-primary: #72513d;
-    --resume-primary-hover: #543a2b;
-    --resume-text: #34271f;
-    --resume-muted: #89796e;
-    --resume-border: #e9e0d7;
-    --resume-background: #faf7f3;
-    --resume-white: #ffffff;
+/* ==========================================
+   BIGBREW SMART OPERATIONS
+   ADD USER PAGE
+   ========================================== */
 
-    min-height: calc(100vh - 70px);
-    padding: 38px 24px 48px;
-    background: var(--resume-background);
-    color: var(--resume-text);
+.user-page {
+    --user-bg: #f8f5f0;
+    --user-white: #ffffff;
+    --user-text: #38291f;
+    --user-muted: #8c7b6e;
+    --user-primary: #79563d;
+    --user-primary-hover: #60412e;
+    --user-border: #e9dfd5;
+    --user-accent: #f3e9de;
+
+    min-height: calc(100vh - 65px);
+    padding: 36px 28px 45px;
+    background: var(--user-bg);
+    color: var(--user-text);
 }
 
-.resume-container {
+.user-container {
     width: 100%;
-    max-width: 960px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
-/* Page heading */
+/* PAGE HEADING */
 
-.resume-heading {
+.user-page-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 28px;
+    gap: 20px;
+    margin-bottom: 27px;
 }
 
-.resume-eyebrow {
+.user-eyebrow {
     display: block;
-    margin-bottom: 9px;
-    color: var(--resume-primary);
+    margin-bottom: 8px;
+    color: var(--user-primary);
     font-size: 10px;
     font-weight: 800;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
 }
 
-.resume-heading h2 {
+.user-page-heading h2 {
     margin: 0;
-    color: var(--resume-text);
-    font-size: clamp(24px, 3vw, 31px);
-    font-weight: 750;
+    color: var(--user-text);
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 800;
     letter-spacing: -0.04em;
 }
 
-.resume-heading p {
-    margin: 9px 0 0;
-    color: var(--resume-muted);
+.user-page-heading p {
+    margin: 8px 0 0;
+    color: var(--user-muted);
     font-size: 13px;
-    line-height: 1.7;
 }
 
-/* Back button */
+/* BACK BUTTON */
 
-.resume-back-btn {
+.user-back-btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 9px;
     flex-shrink: 0;
     padding: 10px 15px;
-    border: 1px solid var(--resume-border);
+    border: 1px solid var(--user-border);
     border-radius: 9px;
-    background: var(--resume-white);
-    color: var(--resume-primary);
+    background: var(--user-white);
+    color: var(--user-primary);
     font-size: 12px;
     font-weight: 700;
     text-decoration: none;
-    transition: background 0.2s ease,
-                border-color 0.2s ease,
-                color 0.2s ease;
+    transition: .2s ease;
 }
 
-.resume-back-btn:hover {
-    border-color: var(--resume-primary);
-    background: #f1e8df;
-    color: var(--resume-primary-hover);
+.user-back-btn:hover {
+    border-color: #cbb49e;
+    background: var(--user-accent);
+    color: var(--user-primary-hover);
 }
 
-/* Main card */
+/* MAIN CARD */
 
-.resume-card {
+.user-card {
     overflow: hidden;
-    border: 1px solid var(--resume-border);
+    border: 1px solid var(--user-border);
     border-radius: 15px;
-    background: var(--resume-white);
-    box-shadow: 0 8px 28px rgba(65, 44, 28, 0.045);
+    background: var(--user-white);
+    box-shadow: 0 8px 30px rgba(60, 39, 24, .045);
 }
 
-.resume-card-header {
+.user-card-header {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 25px 30px;
+    padding: 24px 30px;
     border-bottom: 1px solid #f0e9e2;
-    background: linear-gradient(
-        135deg,
-        #fffdfb 0%,
-        #faf4ed 100%
-    );
+    background: linear-gradient(135deg, #fffdfb, #faf4ed);
 }
 
-.resume-icon {
+.user-header-icon {
     display: grid;
     width: 49px;
     height: 49px;
@@ -262,220 +260,262 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
     border: 1px solid #eadbca;
     border-radius: 12px;
     background: #f3e7d9;
-    color: var(--resume-primary);
+    color: var(--user-primary);
 }
 
-.resume-card-header h4 {
+.user-card-header h4 {
     margin: 0;
-    color: var(--resume-text);
+    color: var(--user-text);
     font-size: 16px;
-    font-weight: 750;
+    font-weight: 800;
 }
 
-.resume-card-header p {
+.user-card-header p {
     margin: 5px 0 0;
-    color: var(--resume-muted);
+    color: var(--user-muted);
     font-size: 12px;
 }
 
-/* Form layout */
-
-.resume-card-body {
+.user-card-body {
     padding: 30px;
 }
 
-.resume-form .form-label {
-    display: block;
-    margin-bottom: 9px;
-    color: #4c3b30;
+/* FORM SECTIONS */
+
+.user-form-section {
+    margin-bottom: 30px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #f0e9e2;
+}
+
+.user-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 23px;
+}
+
+.user-section-number {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 9px;
+    background: var(--user-accent);
+    color: var(--user-primary);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.user-section-heading h5 {
+    margin: 0;
+    color: var(--user-text);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.user-section-heading p {
+    margin: 4px 0 0;
+    color: var(--user-muted);
+    font-size: 11px;
+}
+
+/* FORM GRID */
+
+.user-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px 20px;
+}
+
+.user-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.user-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.user-field label {
+    color: #514034;
     font-size: 12px;
     font-weight: 750;
 }
 
-.required-mark {
-    color: #b64d40;
+.user-field label span,
+.user-form-footer p span {
+    color: #b84c40;
 }
 
-.resume-form .form-control,
-.resume-form .form-select {
-    min-height: 45px;
-    padding: 11px 13px;
-    border: 1px solid #000;
+.user-field .form-control,
+.user-field .form-select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 13px;
+    border: 1px solid #e6ddd4;
     border-radius: 9px;
     background-color: #fff;
-    color: var(--resume-text);
-    font-size: 13px;
+    color: var(--user-text);
+    font-size: 12px;
     box-shadow: none;
-    transition: border-color 0.2s ease,
-                box-shadow 0.2s ease,
-                background-color 0.2s ease;
+    transition: border-color .2s ease, box-shadow .2s ease;
 }
 
-.resume-form .form-control::placeholder {
-    color: #b1a49a;
-    opacity: 1;
+.user-field .form-control::placeholder {
+    color: #b2a69c;
 }
 
-.resume-form .form-control:hover,
-.resume-form .form-select:hover {
+.user-field .form-control:hover,
+.user-field .form-select:hover {
     border-color: #cdb9a7;
 }
 
-.resume-form .form-control:focus,
-.resume-form .form-select:focus {
+.user-field .form-control:focus,
+.user-field .form-select:focus {
     border-color: #a98568;
-    background-color: #fff;
-    box-shadow: 0 0 0 3px rgba(169, 133, 104, 0.13);
+    box-shadow: 0 0 0 3px rgba(169, 133, 104, .13);
     outline: none;
 }
 
-.resume-form textarea.form-control {
-    min-height: 120px;
-    resize: vertical;
-    line-height: 1.7;
+.user-field small {
+    color: #9a8a7e;
+    font-size: 10px;
+    line-height: 1.5;
 }
 
-.resume-form .form-text {
-    margin-top: 7px;
-    color: #95867a;
-    font-size: 11px;
-    line-height: 1.6;
-}
+/* FORM FOOTER */
 
-/* Form footer */
-
-.resume-form-footer {
+.user-form-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-    margin-top: 32px;
-    padding-top: 23px;
-    border-top: 1px solid #f0e9e2;
+    padding-top: 3px;
 }
 
-.resume-required-note {
-    color: var(--resume-muted);
+.user-form-footer p {
+    margin: 0;
+    color: var(--user-muted);
     font-size: 11px;
 }
 
-.resume-form-actions {
+.user-form-actions {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 10px;
 }
 
-.resume-cancel-btn,
-.resume-submit-btn {
+.user-cancel-btn,
+.user-submit-btn {
     display: inline-flex;
     min-height: 42px;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 10px 17px;
+    padding: 10px 18px;
     border-radius: 9px;
     font-size: 12px;
     font-weight: 750;
     text-decoration: none;
-    transition: background 0.2s ease,
-                border-color 0.2s ease,
-                color 0.2s ease,
-                transform 0.2s ease;
+    transition: .2s ease;
 }
 
-.resume-cancel-btn {
-    border: 1px solid var(--resume-border);
+.user-cancel-btn {
+    border: 1px solid var(--user-border);
     background: #fff;
     color: #655347;
 }
 
-.resume-cancel-btn:hover {
+.user-cancel-btn:hover {
     border-color: #cdb9a7;
     background: #f8f1ea;
-    color: var(--resume-primary-hover);
+    color: var(--user-primary-hover);
 }
 
-.resume-submit-btn {
-    border: 1px solid var(--resume-primary);
-    background: var(--resume-primary);
-    color: #fff;
+.user-submit-btn {
+    border: 1px solid var(--user-primary);
+    background: var(--user-primary);
+    color: white;
 }
 
-.resume-submit-btn:hover {
+.user-submit-btn:hover {
     transform: translateY(-1px);
-    border-color: var(--resume-primary-hover);
-    background: var(--resume-primary-hover);
-    color: #fff;
+    border-color: var(--user-primary-hover);
+    background: var(--user-primary-hover);
+    color: white;
 }
 
-.resume-submit-btn:focus-visible,
-.resume-cancel-btn:focus-visible,
-.resume-back-btn:focus-visible {
-    outline: 3px solid rgba(169, 133, 104, 0.3);
+.user-back-btn:focus-visible,
+.user-cancel-btn:focus-visible,
+.user-submit-btn:focus-visible {
+    outline: 3px solid rgba(169, 133, 104, .3);
     outline-offset: 3px;
 }
 
-/* Bottom note */
-
-.resume-footer-note {
-    margin: 18px 0 0;
+.user-footer-note {
+    margin: 17px 0 0;
     color: #9a8b7f;
     font-size: 11px;
     text-align: center;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 
-@media (max-width: 650px) {
-    .resume-page {
-        padding: 25px 14px 35px;
+@media (max-width: 700px) {
+    .user-page {
+        padding: 25px 15px 35px;
     }
 
-    .resume-heading {
+    .user-page-heading {
         align-items: flex-start;
         flex-direction: column;
-        gap: 17px;
-        margin-bottom: 22px;
     }
 
-    .resume-heading h2 {
-        font-size: 25px;
+    .user-card-header {
+        padding: 20px;
     }
 
-    .resume-card-header {
-        padding: 21px 19px;
-    }
-
-    .resume-card-body {
+    .user-card-body {
         padding: 22px 19px;
     }
 
-    .resume-form-footer {
-        align-items: stretch;
-        flex-direction: column;
-        gap: 16px;
+    .user-form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
 
-    .resume-form-actions {
+    .user-field.full-width {
+        grid-column: auto;
+    }
+
+    .user-form-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .user-form-actions {
         width: 100%;
     }
 
-    .resume-form-actions .btn {
+    .user-form-actions > * {
         flex: 1;
     }
 }
 
 @media (max-width: 380px) {
-    .resume-form-actions {
+    .user-form-actions {
         flex-direction: column-reverse;
-        align-items: stretch;
     }
 
-    .resume-form-actions .btn {
+    .user-form-actions > * {
         width: 100%;
     }
 }
+
 /* =========================================================
    REPORTS PAGE
    BigBrew Custom UI

@@ -1,26 +1,30 @@
+
 <?php
 include 'include/header.php';
 ?>
 
-<div class="resume-page">
-    <div class="resume-container">
+<div class="user-page">
+    <div class="user-container">
 
         <!-- Page Heading -->
-        <div class="resume-heading">
+        <div class="user-page-heading">
             <div>
-                <span class="resume-eyebrow">Add User</span>
-                <h2>Add Bigbrew Smart Operation User</h2>
+                <span class="user-eyebrow">USER MANAGEMENT</span>
+                <h2>Add New User</h2>
+                <p>Create an account and assign access privileges to your staff.</p>
             </div>
 
-            <a href="userlist.php" class="btn resume-back-btn">
+            <a href="user.php" class="user-back-btn">
                 <span aria-hidden="true">&larr;</span>
-                Back to user List
+                Back to Users
             </a>
         </div>
-        <!-- Resume Form Card -->
-        <div class="card resume-card">
-            <div class="resume-card-header">
-                <div class="resume-icon" aria-hidden="true">
+
+        <!-- Main Form Card -->
+        <div class="user-card">
+
+            <div class="user-card-header">
+                <div class="user-header-icon">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          width="25" height="25"
                          viewBox="0 0 24 24"
@@ -28,157 +32,220 @@ include 'include/header.php';
                          stroke-width="1.8"
                          stroke-linecap="round"
                          stroke-linejoin="round">
-                        <rect x="5" y="3" width="14" height="18" rx="2"></rect>
-                        <path d="M9 8h6"></path>
-                        <path d="M9 12h6"></path>
-                        <path d="M9 16h4"></path>
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="10" cy="7" r="4"/>
+                        <path d="M20 8v6"/>
+                        <path d="M23 11h-6"/>
                     </svg>
                 </div>
 
                 <div>
-                    <h4>Add New User</h4>
-                    <p>Complete the information below.</p>
+                    <h4>Account Information</h4>
+                    <p>Enter the details required to register a new user.</p>
                 </div>
             </div>
-            <div class="card-body resume-card-body">
+
+            <div class="user-card-body">
 
                 <form action="../config/code.php"
                       method="POST"
-                      class="resume-form">
+                      class="user-form"
+                      id="addUserForm">
 
                     <input
                         type="hidden"
                         name="user_id"
                         value="<?= htmlspecialchars((string)($id ?? ''), ENT_QUOTES, 'UTF-8'); ?>"
                     >
-                    <!-- Type -->
-                    <div class="mb-4">
-                        <label for="resume-type" class="form-label">
-                            ROLE<span class="required-mark">*</span>
-                        </label>
 
-                        <select
-                            id="resume-type"
-                            name="type"
-                            class="form-select"
-                            required
-                        >
-                            <option value="Manager">Manager</option>
-                            <option value="employee">Employee</option>
-                        </select>
-                    </div>
-                    <!-- Company / School -->
-                    <div class="mb-4">
-                        <label for="resume-name" class="form-label">
-                            First Name
-                            <span class="required-mark">*</span>
-                        </label>
+                    <!-- PERSONAL INFORMATION -->
+                    <div class="user-form-section">
+                        <div class="user-section-heading">
+                            <span class="user-section-number">01</span>
+                            <div>
+                                <h5>Personal Information</h5>
+                                <p>Basic information about the account holder.</p>
+                            </div>
+                        </div>
 
-                        <input
-                            type="text"
-                            id="resume-name"
-                            name="first_name"
-                            class="form-control"
-                            placeholder="Enter first name"
-                            maxlength="255"
-                            required
-                        >
-                    </div>
+                        <div class="user-form-grid">
 
-                    <!-- Title -->
-                    <div class="mb-4">
-                        <label for="resume-title" class="form-label">
-                           Last Name
-                            <span class="required-mark">*</span>
-                        </label>
+                            <div class="user-field">
+                                <label for="first_name">
+                                    First Name <span>*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="first_name"
+                                    name="first_name"
+                                    class="form-control"
+                                    placeholder="Enter first name"
+                                    maxlength="255"
+                                    autocomplete="given-name"
+                                    required
+                                >
+                            </div>
 
-                        <input
-                            type="text"
-                            id="resume-title"
-                            name="last_name"
-                            class="form-control"
-                            placeholder="e.g., Cashier, Bachelor of Science in..."
-                            maxlength="255"
-                            required
-                        >
-                    </div>
-                    <!-- Address -->
-                    <div class="mb-4">
-                        <label for="resume-address" class="form-label">
-                            username <span class="required-mark">*</span>
-                        </label>
-                        <input
-                            type="text"
-                            id="resume-address"
-                            name="username"
-                            class="form-control"
-                            placeholder="Enter your username"
-                            maxlength="255"
-                            required
-                        >
-                    </div>
-                    <!-- Description -->
-                    <div class="mb-4">
-                        <label for="resume-description" class="form-label">
-                            Password <span class="required-mark">*</span>
-                        </label>
-                        <input
-                            id="resume-description"
-                            name="password"
-                            type="password"
-                            class="form-control"
-                            rows="4"
-                            placeholder="Enter your password"
-                            required
-                        ></input>
-                     
-                    </div>
-                    <div class="mb-4">
-                        <label for="resume-description" class="form-label">
-                            confirm Password <span class="required-mark">*</span>
-                        </label>
-                        <input
-                            id="resume-description"
-                            name="confirm_password"
-                            type="password"
-                            class="form-control"
-                            rows="4"
-                            placeholder="Confirm your password"
-                            required
-                        ></input>
+                            <div class="user-field">
+                                <label for="last_name">
+                                    Last Name <span>*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="last_name"
+                                    name="last_name"
+                                    class="form-control"
+                                    placeholder="Enter last name"
+                                    maxlength="255"
+                                    autocomplete="family-name"
+                                    required
+                                >
+                            </div>
+
+                        </div>
                     </div>
 
-                    <!-- Actions -->
-                    <div class="resume-form-footer">
+                    <!-- ACCOUNT DETAILS -->
+                    <div class="user-form-section">
+                        <div class="user-section-heading">
+                            <span class="user-section-number">02</span>
+                            <div>
+                                <h5>Account Credentials</h5>
+                                <p>Set the username and password for login access.</p>
+                            </div>
+                        </div>
 
-                        <div class="resume-form-actions">
-                            <a href="resumelist.php"
-                               class="btn resume-cancel-btn">
+                        <div class="user-form-grid">
+
+                            <div class="user-field full-width">
+                                <label for="username">
+                                    Username <span>*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    id="username"
+                                    name="username"
+                                    class="form-control"
+                                    placeholder="Create a username"
+                                    maxlength="255"
+                                    autocomplete="username"
+                                    required
+                                >
+                            </div>
+
+                            <div class="user-field">
+                                <label for="password">
+                                    Password <span>*</span>
+                                </label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    class="form-control"
+                                    placeholder="Enter password"
+                                    minlength="8"
+                                    autocomplete="new-password"
+                                    required
+                                >
+                                <small>Use at least 8 characters.</small>
+                            </div>
+
+                            <div class="user-field">
+                                <label for="confirm_password">
+                                    Confirm Password <span>*</span>
+                                </label>
+                                <input
+                                    type="password"
+                                    id="confirm_password"
+                                    name="confirm_password"
+                                    class="form-control"
+                                    placeholder="Re-enter password"
+                                    minlength="8"
+                                    autocomplete="new-password"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ROLE ASSIGNMENT -->
+                    <div class="user-form-section">
+                        <div class="user-section-heading">
+                            <span class="user-section-number">03</span>
+                            <div>
+                                <h5>Role Assignment</h5>
+                                <p>Select the access level for this account.</p>
+                            </div>
+                        </div>
+
+                        <div class="user-field">
+                            <label for="type">
+                                User Role <span>*</span>
+                            </label>
+
+                            <select
+                                id="type"
+                                name="type"
+                                class="form-select"
+                                required
+                            >
+                                <option value="Manager">Manager</option>
+                                <option value="employee">Employee</option>
+                            </select>
+
+                            <small>
+                                The assigned role determines which system features the user can access.
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- FORM ACTIONS -->
+                    <div class="user-form-footer">
+
+                        <p>
+                            <span>*</span> Required fields
+                        </p>
+
+                        <div class="user-form-actions">
+                            <a href="user.php" class="user-cancel-btn">
                                 Cancel
                             </a>
 
                             <button
                                 type="submit"
                                 name="user_add"
-                                class="btn resume-submit-btn"
+                                class="user-submit-btn"
                             >
-                                Add new user
+                                Create User
                                 <span aria-hidden="true">&rarr;</span>
                             </button>
                         </div>
+
                     </div>
 
                 </form>
-
             </div>
         </div>
 
-        <p class="resume-footer-note">
-            Make sure the information is accurate before saving your entry.
+        <p class="user-footer-note">
+            Make sure all account information is correct before creating the user.
         </p>
 
     </div>
 </div>
 
+<script>
+document.getElementById('addUserForm').addEventListener('submit', function (event) {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm_password').value;
+
+    if (password !== confirmPassword) {
+        event.preventDefault();
+        alert('Passwords do not match. Please check your entries.');
+        document.getElementById('confirm_password').focus();
+    }
+});
+</script>
+
 <?php include 'include/footer.php'; ?>
-```
