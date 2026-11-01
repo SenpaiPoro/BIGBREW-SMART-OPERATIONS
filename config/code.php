@@ -78,10 +78,10 @@ if (isset($_POST['login'])) {
                 exit();
             }
         } else {
-            echo "<script>
+            echo "< >
                 alert('Incorrect username or password.');
                 window.location.href = '../login.php';
-            </script>";
+            </>";
             exit();
         }
     } else {

@@ -356,7 +356,7 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
     width: 100%;
     min-height: 44px;
     padding: 10px 13px;
-    border: 1px solid #e6ddd4;
+    border: 2px solid #e6ddd483;
     border-radius: 9px;
     background-color: #fff;
     color: var(--user-text);
@@ -366,7 +366,7 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
 }
 
 .user-field .form-control::placeholder {
-    color: #b2a69c;
+    color: #e6ddd483;
 }
 
 .user-field .form-control:hover,
