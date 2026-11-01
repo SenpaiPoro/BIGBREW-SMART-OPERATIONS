@@ -94,7 +94,6 @@ if (isset($_POST['login'])) {
     $stmt->close();
 }
 
-
  if (isset($_POST['user_add'])) {
     $employeeID = validate($_POST['employee_id']);
     $position = validate($_POST['position']);
