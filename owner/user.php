@@ -56,7 +56,7 @@ a    <div class="reports-card">
                         <tr>
 
                             <td>
-                                <?= htmlspecialchars($DataList['first_name'] ?? ''); ?>
+                                <?= htmlspecialchars($DataList['first_name'] ?? ''); ?> <?= htmlspecialchars($DataList['last_name'] ?? ''); ?>
                             </td>
 
                             <td>

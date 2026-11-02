@@ -186,11 +186,11 @@ include 'include/header.php';
 
                             <select
                                 id="type"
-                                name="type"
+                                name="position"
                                 class="form-select"
                                 required
                             >
-                                <option value="Manager">Manager</option>
+                                <option value="manager">Manager</option>
                                 <option value="employee">Employee</option>
                             </select>
 
