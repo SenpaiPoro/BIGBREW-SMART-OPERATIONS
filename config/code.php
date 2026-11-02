@@ -115,7 +115,7 @@ if (isset($_POST['login'])) {
     }
 
     // Insert the new user into the database
-    $insertQuery = "INSERT INTO account (emp_id, position, first_name, last_name, username, password) 
+    $insertQuery = "INSERT INTO account (emp, position, first_name, last_name, username, password) 
                     VALUES ('$employeeID', '$position', '$firstName', '$lastName', '$username', '$password')";
 
     if (mysqli_query($conn, $insertQuery)) {

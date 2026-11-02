@@ -4,7 +4,7 @@ $activePage = 'reports';
 require_once __DIR__ . '/include/header.php';?>
 <div class="reports-page">
 
-    <div class="reports-card">
+a    <div class="reports-card">
         <!-- Header -->
         <div class="reports-card-header">
             <div class="reports-header-content">
@@ -34,10 +34,6 @@ require_once __DIR__ . '/include/header.php';?>
                                 Name
                             </th>
 
-                            <th class="address-column">
-                                Address
-                            </th>
-
                             <th class="code-column">
                                 Position
                             </th>
@@ -60,7 +56,7 @@ require_once __DIR__ . '/include/header.php';?>
                         <tr>
 
                             <td>
-                                <?= htmlspecialchars($DataList['name'] ?? ''); ?>
+                                <?= htmlspecialchars($DataList['first_name'] ?? ''); ?>
                             </td>
 
                             <td>
