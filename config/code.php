@@ -113,7 +113,6 @@ if (isset($_POST['login'])) {
         </script>";
         exit();
     }
-
     // Insert the new user into the database
     $insertQuery = "INSERT INTO account (emp_id, position, first_name, last_name, username, password) 
                     VALUES ('$employeeID', '$position', '$firstName', '$lastName', '$username', '$password')";
