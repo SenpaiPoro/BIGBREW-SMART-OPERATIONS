@@ -131,4 +131,15 @@ if (isset($_POST['login'])) {
         exit();
     }
 }
+
+if (isset($_GET['logout'])) {
+    // Start the session only if it is not already active
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    session_unset();
+    session_destroy();
+    header("Location: ../login.php");
+    exit();
+}   
 ?>
