@@ -29,7 +29,7 @@ if (!defined('BASE_URL')) {
         : '');
 }
   if (empty($_SESSION['username'])) {
-      header('Location: ' . BASE_URL . '/login.php');
+      header('Location: ' . BASE_URL . '/../login.php');
       exit;
   }
 if (!function_exists('e')) {
