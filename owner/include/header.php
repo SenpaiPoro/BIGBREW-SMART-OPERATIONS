@@ -42,7 +42,6 @@ if (!function_exists('e')) {
 $pageTitle  = $pageTitle  ?? 'Dashboard';
 $activePage = $activePage ?? '';
 $crumb      = $crumb      ?? $pageTitle;
-
 /* Signed-in user - change the session keys to match your login. */
 $userName     = $_SESSION['name'] ?? $_SESSION['username'] ?? 'Owner';
 $userRole     = $_SESSION['role'] ?? 'Owner';
