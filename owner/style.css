@@ -521,6 +521,32 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
    BigBrew Custom UI
    ========================================================= */
 .reports-page {
+
+  .sidebar-bottom form {
+    width: 100%;
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 11px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #f8eeea;
+    color: #8b4b3f;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.logout-link:hover {
+    background: #ead6ce;
+    color: #67352d;
+}
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;

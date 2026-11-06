@@ -57,9 +57,24 @@ $nav = [
       <?php endforeach; ?>
     </nav>
     <div class="sidebar-bottom">
-      <a class="profile" href="<?= BASE_URL ?>/logout.php" title="Sign out">
+    <div class="profile">
         <span class="avatar"><?= e($userInitials) ?></span>
-        <span class="profile-text"><strong><?= e($userName) ?></strong><small><?= e($userRole) ?></small></span>
-      </a>
+        <span class="profile-text">
+            <strong><?= e($userName) ?></strong>
+            <small><?= e($userRole) ?></small>
+        </span>
     </div>
+
+    <form action="<?= BASE_URL ?>/config/code.php" method="POST"
+          onsubmit="return confirm('Are you sure you want to sign out?');">
+
+        <button type="submit" name="logout" value="1" class="logout-link">
+            <svg class="i" width="16" height="16">
+                <use href="#i-logout"/>
+            </svg>
+            <span>Sign Out</span>
+        </button>
+
+    </form>
+</div>
   </aside>
