@@ -65,7 +65,7 @@ $nav = [
         </span>
     </div>
 
-    <form action="<?= BASE_URL ?>/config/code.php" method="POST"
+    <form action="../config/code.php" method="POST"
           onsubmit="return confirm('Are you sure you want to sign out?');">
 
         <button type="submit" name="logout" value="1" class="logout-link">
