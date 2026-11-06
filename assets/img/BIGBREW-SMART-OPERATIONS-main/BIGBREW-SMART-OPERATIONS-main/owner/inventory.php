@@ -76,7 +76,7 @@
     <div class="sidebar-bottom">
       <a class="profile" href="logout.php" title="Sign out">
         <span class="avatar"><!-- initials -->AB</span>
-        <span class="profile-text"><strong><!-- full name -->Full Name</strong><small><!-- role -->Owner</small></span>
+        <span class="profile-text"><strong><!-- full name -->Full Name</strong><small><!-- role -->Logout</small></span>
       </a>
     </div>
   </aside>
