@@ -64,7 +64,6 @@ $nav = [
             <small><?= e($userRole) ?></small>
         </span>
     </div>
-
     <form action="../config/code.php" method="POST"
           onsubmit="return confirm('Are you sure you want to sign out?');">
 
