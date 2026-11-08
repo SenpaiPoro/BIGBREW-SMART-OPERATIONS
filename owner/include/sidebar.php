@@ -65,16 +65,7 @@ $nav = [
     <?php endforeach; ?>
   </nav>
   <div class="sidebar-bottom">
-
     <div class="sidebar-bottom">
-      <div class="profile">
-        <span class="avatar"><?= e($userInitials) ?></span>
-        <span class="profile-text">
-          <strong><?= e($userName) ?></strong>
-          <small><?= e($userRole) ?></small>
-        </span>
-      </div>
-
       <form action="<?= BASE_URL ?>/../logout.php" method="POST"
         onsubmit="return confirm('Are you sure you want to sign out?');">
 
@@ -86,5 +77,4 @@ $nav = [
         </button>
       </form>
     </div>
-
 </aside>
