@@ -11,69 +11,80 @@
  *   view  = (optional) only used by inventory.php to switch its sections
  */
 $nav = [
-    'OPERATIONS' => [
-        ['key' => 'dashboard',   'label' => 'Dashboard',   'href' => 'dashboard.php',   'icon' => 'grid'],
-        ['key' => 'new-sale',    'label' => 'New Sale',    'href' => 'new-sale.php',    'icon' => 'plus-circle'],
-        ['key' => 'user-accounts', 'label' => 'User Accounts', 'href' => 'user.php', 'icon' => 'list'],
-    ],
-    'INVENTORY' => [
-        ['key' => 'inventory',   'label' => 'Inventory',            'href' => 'inventory.php#inventory',   'icon' => 'box',   'view' => 'inventory'],
-        ['key' => 'ingredients', 'label' => 'Ingredients',          'href' => 'inventory.php#ingredients', 'icon' => 'list',  'view' => 'ingredients'],
-        ['key' => 'recipes',     'label' => 'Recipes',              'href' => 'inventory.php#recipes',     'icon' => 'book',  'view' => 'recipes'],
-        ['key' => 'purchasing',  'label' => 'Purchasing',           'href' => 'inventory.php#purchasing',  'icon' => 'cart',  'view' => 'purchasing'],
-        ['key' => 'receiving',   'label' => 'Receiving',            'href' => 'inventory.php#receiving',   'icon' => 'inbox', 'view' => 'receiving'],
-        ['key' => 'analytics',   'label' => 'Ingredient Analytics', 'href' => 'inventory.php#analytics',   'icon' => 'chart', 'view' => 'analytics'],
-    ],
-    'INSIGHTS' => [
-        ['key' => 'reports',     'label' => 'Reports',     'href' => 'reports.php',     'icon' => 'file'],
-    ],
+  'OPERATIONS' => [
+    ['key' => 'dashboard', 'label' => 'Dashboard', 'href' => 'dashboard.php', 'icon' => 'grid'],
+    ['key' => 'new-sale', 'label' => 'New Sale', 'href' => 'new-sale.php', 'icon' => 'plus-circle'],
+    ['key' => 'user-accounts', 'label' => 'User Accounts', 'href' => 'user.php', 'icon' => 'list'],
+  ],
+  'INVENTORY' => [
+    ['key' => 'inventory', 'label' => 'Inventory', 'href' => 'inventory.php#inventory', 'icon' => 'box', 'view' => 'inventory'],
+    ['key' => 'ingredients', 'label' => 'Ingredients', 'href' => 'inventory.php#ingredients', 'icon' => 'list', 'view' => 'ingredients'],
+    ['key' => 'recipes', 'label' => 'Recipes', 'href' => 'inventory.php#recipes', 'icon' => 'book', 'view' => 'recipes'],
+    ['key' => 'purchasing', 'label' => 'Purchasing', 'href' => 'inventory.php#purchasing', 'icon' => 'cart', 'view' => 'purchasing'],
+    ['key' => 'receiving', 'label' => 'Receiving', 'href' => 'inventory.php#receiving', 'icon' => 'inbox', 'view' => 'receiving'],
+    ['key' => 'analytics', 'label' => 'Ingredient Analytics', 'href' => 'inventory.php#analytics', 'icon' => 'chart', 'view' => 'analytics'],
+  ],
+  'INSIGHTS' => [
+    ['key' => 'reports', 'label' => 'Reports', 'href' => 'reports.php', 'icon' => 'file'],
+  ],
 ];
 ?>
-  <!-- ===================== SIDEBAR ===================== -->
-  <div class="nav-overlay" id="nav-overlay" hidden></div>
-  <aside class="sidebar" id="sidebar">
-    <div class="brand">
-      <span class="brand-mark"><img src="../assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
-      <div>
-        <strong style="color: black">BigBrew</strong>
-        <small>SMART OPERATIONS</small>
-      </div>
-      <button class="icon-btn" id="menu-close" type="button" aria-label="Close menu"><svg class="i" width="18" height="18"><use href="#i-x"/></svg></button>
+<!-- ===================== SIDEBAR ===================== -->
+<div class="nav-overlay" id="nav-overlay" hidden></div>
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <span class="brand-mark"><img src="../assets/big-brew-franchise-logo.webp" alt="BigBrew logo"></span>
+    <div>
+      <strong style="color: black">BigBrew</strong>
+      <small>SMART OPERATIONS</small>
     </div>
-    <div class="branch-label"><span class="branch-dot"></span> BRANCH <svg class="i" width="13" height="13"><use href="#i-chevron"/></svg></div>
-    <div class="branch-name">Putatan, Muntinlupa</div>
-    <nav>
-      <?php foreach ($nav as $group => $items): ?>
+    <button class="icon-btn" id="menu-close" type="button" aria-label="Close menu"><svg class="i" width="18"
+        height="18">
+        <use href="#i-x" />
+      </svg></button>
+  </div>
+  <div class="branch-label"><span class="branch-dot"></span> BRANCH <svg class="i" width="13" height="13">
+      <use href="#i-chevron" />
+    </svg></div>
+  <div class="branch-name">Putatan, Muntinlupa</div>
+  <nav>
+    <?php foreach ($nav as $group => $items): ?>
       <div class="nav-group">
         <div class="nav-label"><?= e($group) ?></div>
-        <?php foreach ($items as $item): $on = ($activePage === $item['key']); ?>
-        <a class="nav-link<?= $on ? ' active' : '' ?>" href="<?= e($item['href']) ?>"<?= isset($item['view']) ? ' data-view="' . e($item['view']) . '"' : '' ?>>
-          <span><svg class="i" width="16" height="16"><use href="#i-<?= e($item['icon']) ?>"/></svg></span>
-          <span><?= e($item['label']) ?></span>
-          <span class="active-pip"<?= $on ? '' : ' hidden' ?>></span>
-        </a>
+        <?php foreach ($items as $item):
+          $on = ($activePage === $item['key']); ?>
+          <a class="nav-link<?= $on ? ' active' : '' ?>" href="<?= e($item['href']) ?>" <?= isset($item['view']) ? ' data-view="' . e($item['view']) . '"' : '' ?>>
+            <span><svg class="i" width="16" height="16">
+                <use href="#i-<?= e($item['icon']) ?>" />
+              </svg></span>
+            <span><?= e($item['label']) ?></span>
+            <span class="active-pip" <?= $on ? '' : ' hidden' ?>></span>
+          </a>
         <?php endforeach; ?>
       </div>
-      <?php endforeach; ?>
-    </nav>
+    <?php endforeach; ?>
+  </nav>
+  <div class="sidebar-bottom">
+
     <div class="sidebar-bottom">
-    <div class="profile">
+      <div class="profile">
         <span class="avatar"><?= e($userInitials) ?></span>
         <span class="profile-text">
-            <strong><?= e($userName) ?></strong>
-            <small><?= e($userRole) ?></small>
+          <strong><?= e($userName) ?></strong>
+          <small><?= e($userRole) ?></small>
         </span>
-    </div>
-    <form action="../config/code.php" method="POST"
-          onsubmit="return confirm('Are you sure you want to sign out?');">
+      </div>
+
+      <form action="<?= BASE_URL ?>/logout.php" method="POST"
+        onsubmit="return confirm('Are you sure you want to sign out?');">
 
         <button type="submit" name="logout" value="1" class="logout-link">
-            <svg class="i" width="16" height="16">
-                <use href="#i-logout"/>
-            </svg>
-            <span>Sign Out</span>
+          <svg class="i" width="16" height="16">
+            <use href="#i-logout" />
+          </svg>
+          <span>Sign Out</span>
         </button>
+      </form>
+    </div>
 
-    </form>
-</div>
-  </aside>
+</aside>
