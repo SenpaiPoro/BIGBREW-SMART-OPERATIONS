@@ -520,9 +520,7 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
    REPORTS PAGE
    BigBrew Custom UI
    ========================================================= */
-.reports-page {
-
-  .sidebar-bottom form {
+   .sidebar-bottom form {
     width: 100%;
 }
 
@@ -530,13 +528,12 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     width: 100%;
     padding: 11px 14px;
     border: none;
     border-radius: 10px;
-    background: #f8eeea;
-    color: #8b4b3f;
+    background: #a0705e;
+    color: #44120a;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
@@ -544,12 +541,8 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
 }
 
 .logout-link:hover {
-    background: #ead6ce;
-    color: #67352d;
-}
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
+    background: #973c15;
+    color: #dacdcb;
 }
 /* ---------- CARD ---------- */
 .reports-card {
