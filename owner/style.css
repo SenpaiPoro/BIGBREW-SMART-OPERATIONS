@@ -544,6 +544,114 @@ svg.i { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round
     background: #973c15;
     color: #dacdcb;
 }
+
+/* Logout - MODAL  */
+
+
+/* ================================
+   LOGOUT CONFIRMATION MODAL
+================================ */
+
+.logout-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(35, 25, 18, 0.50);
+    backdrop-filter: blur(5px);
+}
+
+.logout-modal-overlay.show {
+    display: flex;
+}
+
+.logout-modal-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    background: #fffaf3;
+    border: 1px solid #eadcc9;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(35, 25, 18, 0.20);
+    text-align: center;
+    animation: logoutModalIn 0.25s ease;
+}
+
+.logout-modal-icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #805638;
+    background: #f0e3d2;
+}
+
+.logout-modal-card h3 {
+    margin: 0 0 10px;
+    color: #493326;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logout-modal-card p {
+    margin: 0 0 25px;
+    color: #897666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.logout-modal-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.logout-modal-actions button {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.logout-cancel {
+    color: #654b39;
+    background: #eee5d9;
+}
+
+.logout-cancel:hover {
+    background: #e2d4c3;
+}
+
+.logout-confirm {
+    color: #fffaf3;
+    background: #805638;
+}
+
+.logout-confirm:hover {
+    background: #65432d;
+}
+
+@keyframes logoutModalIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 /* ---------- CARD ---------- */
 .reports-card {
   width: 100%;

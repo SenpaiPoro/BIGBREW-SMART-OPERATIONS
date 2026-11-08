@@ -26,6 +26,36 @@
   document.getElementById('menu-close').addEventListener('click', window.closeMenu);
   overlay.addEventListener('click', window.closeMenu);
 })();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("logoutModal");
+    const openButton = document.getElementById("openLogoutModal");
+    const cancelButton = document.getElementById("cancelLogout");
+
+    if (!modal || !openButton || !cancelButton) return;
+
+    openButton.addEventListener("click", function () {
+        modal.classList.add("show");
+    });
+
+    cancelButton.addEventListener("click", function () {
+        modal.classList.remove("show");
+    });
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.classList.remove("show");
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            modal.classList.remove("show");
+        }
+    });
+});
+
 </script>
 </body>
 </html>

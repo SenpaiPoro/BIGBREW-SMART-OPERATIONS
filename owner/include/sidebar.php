@@ -66,15 +66,35 @@ $nav = [
   </nav>
   <div class="sidebar-bottom">
     <div class="sidebar-bottom">
-      <form action="<?= BASE_URL ?>/../logout.php" method="POST"
-        onsubmit="return confirm('Are you sure you want to sign out?');">
 
-        <button type="submit" name="logout" value="1" class="logout-link">
+      <form action="<?= BASE_URL ?>/../logout.php" method="POST" id="logoutForm">
+        <button type="button" class="logout-link" id="openLogoutModal">
           <svg class="i" width="16" height="16">
             <use href="#i-logout" />
           </svg>
           <span>Sign Out</span>
         </button>
       </form>
+      <!-- Logout Confirmation Modal -->
+      <div class="logout-modal-overlay" id="logoutModal">
+        <div class="logout-modal-card">
+          <div class="logout-modal-icon">
+            <svg class="i" width="28" height="28">
+              <use href="#i-logout" />
+            </svg>
+          </div>
+          <h3>Sign Out?</h3>
+          <p>Are you sure you want to sign out of your account?</p>
+          <div class="logout-modal-actions">
+            <button type="button" class="logout-cancel" id="cancelLogout">
+              Cancel
+            </button>
+            <button type="submit" form="logoutForm" name="logout" value="1" class="logout-confirm">
+              Yes, Sign Out
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
 </aside>
