@@ -80,14 +80,14 @@ if (isset($_POST['login'])) {
         } else {
             echo "< >
                 alert('Incorrect username or password.');
-                window.location.href = '../login.php';
+                window.location.href = 'login.php';
             </>";
             exit();
         }
     } else {
         echo "<script>
             alert('Incorrect username or password.');
-            window.location.href = '../login.php';
+            window.location.href = login.php';
         </script>";
         exit();
     }
