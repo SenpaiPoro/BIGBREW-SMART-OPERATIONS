@@ -73,7 +73,7 @@ if (isset($_POST['login'])) {
 
                 echo "<script>
                     alert('Access denied. Unauthorized account role.');
-                    window.location.href = '../login.php';
+                    window.location.href = 'login.php';
                 </script>";
                 exit();
             }

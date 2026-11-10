@@ -66,7 +66,6 @@ $nav = [
   </nav>
   <div class="sidebar-bottom">
     <div class="sidebar-bottom">
-
       <form action="<?= BASE_URL ?>/../logout.php" method="POST" id="logoutForm">
         <button type="button" class="logout-link" id="openLogoutModal">
           <svg class="i" width="16" height="16">
@@ -95,6 +94,5 @@ $nav = [
           </div>
         </div>
       </div>
-
     </div>
 </aside>
