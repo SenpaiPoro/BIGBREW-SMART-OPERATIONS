@@ -25,10 +25,8 @@ if (isset($_POST['register'])) {
 }
 
 if (isset($_POST['login'])) {
-
     $username = validate($_POST['username']);
     $password = validate($_POST['password']);
-
     $stmt = $conn->prepare(
         "SELECT id, username, password, position
          FROM account
@@ -39,38 +37,29 @@ if (isset($_POST['login'])) {
     }
     $stmt->bind_param("s", $username);
     $stmt->execute();
-
     $result = $stmt->get_result();
     if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
         // Verify the password
         if ($password === $row['password']) {
-
             // Start the session only if it is not already active
             if (session_status() === PHP_SESSION_NONE) {
                 session_start();
             }
             session_regenerate_id(true);
-
             $_SESSION['username'] = $row['username'];
             $_SESSION['id'] = $row['id'];
             $_SESSION['position'] = $row['position'];
-
             // Redirect according to the user's role
             if ($row['position'] === 'owner') {
-
                 header('Location: ../owner/inventory-view.php');
                 exit();
-
             } elseif ($row['position'] === 'employee') {
-
                 header('Location: ../employee/cashier-dashboard.php');
                 exit();
-
             } else {
                 session_unset();
                 session_destroy();
-
                 echo "<script>
                     alert('Access denied. Unauthorized account role.');
                     window.location.href = 'login.php';
