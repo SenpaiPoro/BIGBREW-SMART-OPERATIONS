@@ -93,7 +93,6 @@ if (isset($_POST['login'])) {
     }
     $stmt->close();
 }
-
  if (isset($_POST['user_add'])) {
     $employeeID = validate($_POST['employee_id']);
     $position = validate($_POST['position']);
@@ -101,11 +100,9 @@ if (isset($_POST['login'])) {
     $lastName = validate($_POST['last_name']);
     $username = validate($_POST['username']);
     $password = validate($_POST['password']);
-
     // Check if the username already exists
     $checkQuery = "SELECT * FROM account WHERE username = '$username'";
     $checkResult = mysqli_query($conn, $checkQuery);
-
     if (mysqli_num_rows($checkResult) > 0) {
         echo "<script>
             alert('Username already exists. Please choose a different username.');
@@ -131,5 +128,4 @@ if (isset($_POST['login'])) {
         exit();
     }
  }
-
 ?>
