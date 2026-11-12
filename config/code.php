@@ -62,21 +62,21 @@ if (isset($_POST['login'])) {
                 session_destroy();
                 echo "<script>
                     alert('Access denied. Unauthorized account role.');
-                    window.location.href = 'login.php';
+                    window.location.href = '../login.php';
                 </script>";
                 exit();
             }
         } else {
             echo "< >
                 alert('Incorrect username or password.');
-                window.location.href = 'login.php';
+                window.location.href = '../login.php';
             </>";
             exit();
         }
     } else {
         echo "<script>
             alert('Incorrect username or password.');
-            window.location.href = login.php';
+            window.location.href = '../login.php';
         </script>";
         exit();
     }
