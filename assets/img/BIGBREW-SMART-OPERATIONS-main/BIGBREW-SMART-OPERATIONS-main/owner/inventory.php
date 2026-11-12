@@ -197,7 +197,6 @@
               <span>Try a different ingredient, product, or stock filter.</span>
             </div>
           </div>
-
           <!-- ---- Tab: Expiration lots ---- -->
           <div data-group="inv" id="pane-lots" hidden>
             <div class="table-scroll">
@@ -229,7 +228,6 @@
               </table>
             </div>
           </div>
-
           <!-- ---- Tab: Movement history ---- -->
           <div data-group="inv" id="pane-moves" hidden>
             <div class="table-scroll">
