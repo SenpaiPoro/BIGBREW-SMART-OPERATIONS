@@ -8,7 +8,7 @@ if (isset($_POST['register'])) {
     $lastName = validate($_POST['last_name']);
     $username = validate($_POST['username']);
     $password = validate($_POST['password']);
-
+    
     $query = "SELECT * FROM account WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $query);
 
