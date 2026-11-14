@@ -1,9 +1,9 @@
 <?php include 'config/function.php'; ?>
 <?php
-
+session_start();
   if (isset($_SESSION['id'])) {
 
-    $quickQuery = "SELECT * FROM user WHERE id = ?";
+    $quickQuery = "SELECT * FROM account WHERE id = ?";
     if ($stmt = $conn->prepare($quickQuery)) {
       $stmt->bind_param("i", $_SESSION['id']);
       $stmt->execute();
@@ -18,12 +18,12 @@
           header('Location: manager/dashboard.php');
           exit();
         } elseif ($row['position'] === 'employee') {
-          header('Location: staff/cashier-dashboard.php');
+          header('Location: employee/cashier-dashboard.php');
           exit();
         }
       }
     } 
-    header('Location: login.php');
+          header('Location: employee/cashier-dashboard.php');
     exit();
   }
 
