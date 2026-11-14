@@ -1,5 +1,12 @@
 <?php include 'config/function.php'; ?>
+<?php
 
+  if (isset($_SESSION['user_id'])) {
+    header('Location: dashboard.php');
+    exit();
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
