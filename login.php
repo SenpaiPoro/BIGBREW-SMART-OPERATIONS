@@ -1,5 +1,5 @@
-<?php include 'config/function.php'; ?>
-<?php
+<?php include 'config/function.php'; 
+
 session_start();
   if (isset($_SESSION['id'])) {
 
@@ -13,9 +13,6 @@ session_start();
         $row = $result->fetch_assoc();
         if ($row['position'] === 'manager') {
           header('Location: owner/index.php');
-          exit();
-        } elseif ($row['position'] === 'manager') {
-          header('Location: manager/dashboard.php');
           exit();
         } elseif ($row['position'] === 'employee') {
           header('Location: employee/cashier-dashboard.php');
