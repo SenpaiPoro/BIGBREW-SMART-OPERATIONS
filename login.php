@@ -1,8 +1,29 @@
 <?php include 'config/function.php'; ?>
 <?php
 
-  if (isset($_SESSION['user_id'])) {
-    header('Location: dashboard.php');
+  if (isset($_SESSION['id'])) {
+
+    $quickQuery = "SELECT * FROM user WHERE id = ?";
+    if ($stmt = $conn->prepare($quickQuery)) {
+      $stmt->bind_param("i", $_SESSION['id']);
+      $stmt->execute();
+      $result = $stmt->get_result();
+
+      if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if ($row['position'] === 'manager') {
+          header('Location: owner/index.php');
+          exit();
+        } elseif ($row['position'] === 'manager') {
+          header('Location: manager/dashboard.php');
+          exit();
+        } elseif ($row['position'] === 'employee') {
+          header('Location: staff/cashier-dashboard.php');
+          exit();
+        }
+      }
+    } 
+    header('Location: login.php');
     exit();
   }
 

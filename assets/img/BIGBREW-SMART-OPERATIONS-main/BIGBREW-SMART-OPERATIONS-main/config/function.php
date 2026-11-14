@@ -8,7 +8,6 @@ function validate($inputData)
     return trim($validatedData);
 }
 
-
 function getdata($query)
 {
     global $conn;
