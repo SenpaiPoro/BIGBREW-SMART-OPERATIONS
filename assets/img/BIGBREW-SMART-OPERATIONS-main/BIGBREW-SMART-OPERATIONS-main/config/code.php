@@ -2,8 +2,6 @@
 include 'conn.php';
 include 'function.php';
 
-
-
 if (isset($_POST['register'])) {
     $employeeID = validate($_POST['employee_id']);
     $position = validate($_POST['position']);
@@ -30,7 +28,7 @@ if (isset($_POST['register'])) {
 if(isset($_POST['login'])){
 $username = validate($_POST['username']);
 $password = validate($_POST['password']);
-s
+
     $stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -41,7 +39,6 @@ if($result->num_rows > 0 ){
     if(password_verify($password, $row['password'])){
         $_SESSION['username'] = $row['username'];
         $_SESSION['id'] = $row['id'];
-
         header('Location: ../Portfolio_Dashboard/index.php');
         exit();
     } else {
@@ -54,15 +51,5 @@ if($result->num_rows > 0 ){
 
     }
 } 
-
-
-
-
-
-
-
-
-
-
 
 ?>
