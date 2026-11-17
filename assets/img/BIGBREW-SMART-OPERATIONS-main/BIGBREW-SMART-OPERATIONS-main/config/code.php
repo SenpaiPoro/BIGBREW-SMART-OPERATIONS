@@ -27,11 +27,10 @@ if (isset($_POST['register'])) {
     }
 }
 
-
 if(isset($_POST['login'])){
 $username = validate($_POST['username']);
 $password = validate($_POST['password']);
-
+s
     $stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();

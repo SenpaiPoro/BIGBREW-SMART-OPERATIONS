@@ -23,7 +23,6 @@ session_start();
           header('Location: employee/cashier-dashboard.php');
     exit();
   }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
