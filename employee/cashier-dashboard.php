@@ -55,12 +55,12 @@
         <strong><!-- full name -->Full Name</strong>
         <span><!-- role -->Cashier</span>
       </div>
-      <a href="logout.php" aria-label="Sign out" title="Sign out">
+      <a href="../logout.php" aria-label="Sign out" title="Sign out">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.4 6.6a9 9 0 11-12.8 0"/><path d="M12 2v10"/></svg>
       </a>
     </div>
   </aside>
-
+z
   <!-- ===================== MAIN ===================== -->
   <div class="main">
 
