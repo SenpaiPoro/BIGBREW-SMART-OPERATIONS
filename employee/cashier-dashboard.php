@@ -1,4 +1,4 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'include/header.php'; ?>
 
   <!-- ===================== S  IDEBAR ===================== -->
   <aside class="sidebar" id="sidebar">
@@ -162,4 +162,4 @@ z
 
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'include/footer.php'; ?>
