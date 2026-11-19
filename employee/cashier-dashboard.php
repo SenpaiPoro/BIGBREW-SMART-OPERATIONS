@@ -1,3 +1,4 @@
+<?php include 'includes/header.php'; ?>
 
   <!-- ===================== S  IDEBAR ===================== -->
   <aside class="sidebar" id="sidebar">
@@ -12,7 +13,7 @@
     </div>
 
     <nav class="nav">
-      <!-- Add class "active" to the link of the current page -->
+      <!-- Add class "  active" to the link of the current page -->
       <a href="dashboard.php" class="nav-item active" title="Dashboard">
         <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 12h18M12 3v18"/></svg></span>
         <span class="label">Dashboard</span>
@@ -159,24 +160,6 @@ z
     </main>
   </div>
 
-  <!-- ===================== FLOATING BUTTONS ===================== -->
-  <div class="fabs">
-    <a href="qr-view.php" class="fab-qr">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20h1"/></svg>
-      Customer QR View
-    </a>
-    <button class="fab-help" type="button" aria-label="Help" title="Help">?</button>
-  </div>
-
 </div>
 
-<script>
-  // Sidebar collapse toggle (only JS in this file)
-  var sidebar = document.getElementById('sidebar');
-  if (window.innerWidth < 760) sidebar.classList.add('collapsed');
-  document.getElementById('sb-collapse').addEventListener('click', function () {
-    sidebar.classList.toggle('collapsed');
-  });
-</script>
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>
