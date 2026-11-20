@@ -1,6 +1,6 @@
 <?php include 'include/header.php'; ?>
-
-  <!-- ===================== MAIN ===================== -->
+<?php include 'include/sidebar.php'; ?>
+ <!-- ===================== MAIN ===================== -->
   <div class="main">
 
     <header class="topbar">
