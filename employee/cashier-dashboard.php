@@ -2,7 +2,6 @@
 <?php include 'include/sidebar.php'; ?>
  <!-- ===================== MAIN ===================== -->
   <div class="main">
-
     <header class="topbar">
       <div class="left">BigBrew Smart Operations <span class="loc">&nbsp;·&nbsp; Putatan, Muntinlupa</span></div>
       <div class="right">
@@ -11,12 +10,9 @@
         <a href="stock-alerts.php" class="alert-chip">⚠ <span><!-- count -->0</span> stock alerts</a>
       </div>
     </header>
-
     <main class="content">
-
       <h1 class="page-title">Good morning, <!-- first name -->Name</h1>
       <p class="page-sub">Here's your operational summary for today — <!-- today's date -->Sep 29, 2026</p>
-
       <!-- ===== Stat cards ===== -->
       <div class="grid-stats">
         <a href="sales.php" class="stat green">
@@ -40,9 +36,7 @@
           <div class="sub">Awaiting release</div>
         </a>
       </div>
-
       <div class="grid-2">
-
         <!-- ===== Order queue status ===== -->
         <section class="card">
           <h3>Order Queue Status</h3>
@@ -53,7 +47,6 @@
           </div>
           <a href="order-queue.php" class="btn-outline">Open Order Queue →</a>
         </section>
-
         <!-- ===== Inventory alerts ===== -->
         <section class="card">
           <h3>Inventory Alerts</h3>
@@ -73,7 +66,6 @@
           </div>
         </section>
       </div>
-
       <!-- ===== Recent orders ===== -->
       <section class="card">
         <div class="card-head">
@@ -107,10 +99,7 @@
           </table>
         </div>
       </section>
-
     </main>
   </div>
-
 </div>
-
 <?php include 'include/footer.php'; ?>
