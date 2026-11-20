@@ -1,6 +1,5 @@
 <?php
 include '../config/function.php';
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -9,7 +8,6 @@ if (empty($_SESSION['username'])) {
       exit;
   }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
