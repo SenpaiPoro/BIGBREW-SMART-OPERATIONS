@@ -19,6 +19,12 @@ function getdata($query)
     return $data;
 }
 
-
+function retrievedata($query)
+{
+    global $conn;
+    $result = mysqli_query($conn, $query);
+    $data = mysqli_fetch_assoc($result);
+    return $data;
+}
 
 ?>
