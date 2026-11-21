@@ -7,6 +7,8 @@ if (empty($_SESSION['username'])) {
       header('Location: ' . BASE_URL . '/../login.php');
       exit;
   }
+$employeeID = $_SESSION['id'];
+$data = 'select * from user where id = ' . $employeeID;
 ?>
 <!DOCTYPE html>
 <html lang="en">
