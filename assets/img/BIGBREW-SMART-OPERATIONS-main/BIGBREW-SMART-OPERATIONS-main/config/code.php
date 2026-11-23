@@ -10,18 +10,28 @@ if (isset($_POST['register'])) {
     $username = validate($_POST['username']);
     $password = validate($_POST['password']);
 
-    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    $result = mysqli_query($conn, $query);
+    $sqlite = "SELECT * FROM user WHERE username = ?";
+    $stmt = $conn->prepare($sqlite);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();  
 
-    if (mysqli_num_rows($result) == 1) {
-        // User authenticated successfully
-        session_start();
-        $_SESSION['username'] = $username;
-        header("Location: dashboard.php");
+    if($result->num_rows > 0) {
+        echo "<script>alert('Username already exists'); window.location.href='../Portfolio_Dashboard/register.php';</script>";
         exit();
     } else {
-        // Invalid credentials
-        echo "Invalid username or password.";
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $insertQuery = "INSERT INTO user (employee_id, position, first_name, last_name, username, password) VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($insertQuery);
+        $stmt->bind_param("ssssss", $employeeID, $position, $firstName, $lastName, $username, $hashedPassword);
+        
+        if ($stmt->execute()) {
+            echo "<script>alert('Registration successful'); window.location.href='../Portfolio_Dashboard/login.php';</script>";
+            exit();
+        } else {
+            echo "<script>alert('Error: " . $stmt->error . "'); window.location.href='../Portfolio_Dashboard/register.php';</script>";
+            exit();
+        }
     }
 }
 
