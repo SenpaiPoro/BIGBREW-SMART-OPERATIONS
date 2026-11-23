@@ -1,5 +1,4 @@
 <?php
-include 'conn.php';
 include 'function.php';
 
 if (isset($_POST['register'])) {
