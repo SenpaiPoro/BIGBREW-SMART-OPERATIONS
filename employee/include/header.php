@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 if (empty($_SESSION['username'])) {
-      header('Location: ' . BASE_URL . '/../login.php');
+      header('Location: ../login.php?');
       exit;
   }
 $employeeID = $_SESSION['id'];
