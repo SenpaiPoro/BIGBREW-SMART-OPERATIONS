@@ -9,6 +9,11 @@ if (empty($_SESSION['username'])) {
   }
 $employeeID = $_SESSION['id'];
 $data = 'select * from user where id = ' . $employeeID;
+$query = mysqli_query($conn, $data);
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
