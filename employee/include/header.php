@@ -8,7 +8,7 @@ if (empty($_SESSION['username'])) {
       exit;
   }
 $employeeID = $_SESSION['id'];
-$data = 'select * from user where id = ' . $employeeID;
+$data = 'select * from account where id = ' . $employeeID;
 $query = mysqli_query($conn, $data);
 
 
