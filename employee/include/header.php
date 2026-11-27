@@ -7,10 +7,9 @@ if (empty($_SESSION['username'])) {
       header('Location: ../login.php?');
       exit;
   }
-$employeeID = $_SESSION['id'];
-$data = 'select * from account where id = ' . $employeeID;
-$query = mysqli_query($conn, $data);
-
+    $employeeID = $_SESSION['id'];
+    $data = 'select * from account where id = ' . $employeeID;
+    $query = mysqli_query($conn, $data);
 ?>
 <!DOCTYPE html>
 <html lang="en">
